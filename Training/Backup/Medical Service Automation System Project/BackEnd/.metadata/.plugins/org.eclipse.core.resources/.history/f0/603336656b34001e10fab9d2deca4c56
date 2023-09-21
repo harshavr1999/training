@@ -1,0 +1,5 @@
+package backend.medicalservice.AdminClerk.services;
+
+public interface PatientService {
+
+}

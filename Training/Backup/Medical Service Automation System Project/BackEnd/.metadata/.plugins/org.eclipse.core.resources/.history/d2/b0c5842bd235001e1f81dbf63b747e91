@@ -1,0 +1,14 @@
+package backend.medicalservice.Appointments.services.impl;
+
+import backend.medicalservice.Appointments.entities.BillingEO;
+import backend.medicalservice.Appointments.services.BillingService;
+
+public class BillingServiceImpl implements BillingService {
+
+	@Override
+	public void addBill(BillingEO bill) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

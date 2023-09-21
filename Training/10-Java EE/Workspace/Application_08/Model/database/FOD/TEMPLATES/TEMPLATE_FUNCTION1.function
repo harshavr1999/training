@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<function xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">1181523f-e8c2-4dcf-a4fa-ff6a61ce31a6</identifier>
+  </ID>
+  <name>TEMPLATE_FUNCTION1</name>
+  <returnTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+    <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+    <typeName>NUMBER</typeName>
+  </returnTypeID>
+  <schema>
+    <name>TEMPLATES</name>
+  </schema>
+  <source>/*
+ * To change this template comment, edit FOD.TEMPLATES.TEMPLATE_FUNCTION1
+ */
+CREATE OR REPLACE FUNCTION TEMPLATE_FUNCTION1 RETURN NUMBER AS 
+BEGIN
+  RETURN NULL;
+END TEMPLATE_FUNCTION1;</source>
+</function>

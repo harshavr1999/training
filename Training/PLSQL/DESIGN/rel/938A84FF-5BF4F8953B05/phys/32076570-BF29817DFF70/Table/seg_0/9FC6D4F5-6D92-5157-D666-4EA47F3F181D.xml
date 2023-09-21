@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="OWNER_DETAILS" directorySegmentName="seg_0" id="9FC6D4F5-6D92-5157-D666-4EA47F3F181D">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>92DDE1D6-1AF8-813D-533A-19EACBC53FA2</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NAME" id="3F82C0A5-68E9-5212-2B54-5F1B4230210D">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OWNER_ID" id="6C40743B-8119-8177-F5CE-02484255F08C">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MOBILE_NUMBER" id="6D5BD85B-0423-827A-0E74-78965EFEE39A">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDRESS" id="97A93CE9-ED4D-3F01-0480-EB62A8E593AE">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="OWNER_DETAILS_PK" id="5C6A6ED8-DC68-372D-6F48-6D11F332AB3C">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+<segment>1C77DB94-F796-4872-9270-CB538CB32E60</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OWNER_DETAILS_PK" id="D3534C05-01F5-0216-E8E3-1978FE2E7C03">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<segment>1C77DB94-F796-4872-9270-CB538CB32E60</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+<existingIndex>5C6A6ED8-DC68-372D-6F48-6D11F332AB3C</existingIndex>
+<indexSegment>1C77DB94-F796-4872-9270-CB538CB32E60</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

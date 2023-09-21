@@ -1,0 +1,12 @@
+package training.iqgateway.entity;
+
+public class OwnerDetailsEO {
+    private Integer ownerID;
+    private String firstName;
+    private String lastName;
+    private String mobileNumber;
+    private String address;
+    private String aadharNumber;
+    private String panNumber;
+    private String gender;
+}

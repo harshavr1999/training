@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Spring-Boot-Validation"/>
+<aop-project name="Spring-Boot-Logging"/>
+<aop-project name="Spring-Boot-Thymeleaf"/>
+<aop-project name="Spring-Boot-Offence"/>
+<aop-project name="SpringBootWay3"/>
+<aop-project name="Spring-Boot-ORM"/>
+<aop-project name="Spring-Boot-Lombok"/>
+<aop-project name="SpringBootMongo"/>
+<aop-project name="Spring-Boot-Jdbc"/>
+<aop-project name="Spring-Boot-actuator"/>
+</aop-reference-model>

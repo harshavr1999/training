@@ -1,0 +1,5 @@
+package backend.medicalservice.Messages.services;
+
+public class MessageServiceImpl implements MessageService {
+
+}

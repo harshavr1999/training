@@ -1,0 +1,288 @@
+import { IconButton, TextField } from '@mui/material'
+import React, { useEffect, useRef } from 'react';
+import SendIcon from '@mui/icons-material/Send';
+import OthersMessage from './OthersMessage';
+import SelfMessage from './SelfMessage';
+import axios from 'axios';
+import SockJS from 'sockjs-client';
+import Stomp from 'stompjs';
+
+
+// 'use strict';
+// var chatPage = document.querySelector('#chat-page');
+// var messageForm = document.querySelector('#messageForm');
+// var messageInput = document.querySelector('#messageInput');
+// // var messageInput = inputMessage;
+// var messageArea = document.querySelector('#messageArea');
+// var connectingElement = document.querySelector('.connecting');
+
+
+
+var stompClient = null;
+var username = null;
+// console.log(messageForm);
+
+var colors = [
+  '#2196F3', '#32c787', '#00BCD4', '#ff5652',
+  '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
+];
+
+const MessagesArea = ({ props }) => {
+  const [messages, setMessages] = React.useState([]);
+  const [inputMessage, setInputMessage] = React.useState('');
+  const [alternateOrder, setAlternateOrder] = React.useState(true);
+  const [messagesAlternating, setMessagesAlternating] = React.useState([]);
+
+  const chatPageRef = useRef(null);
+  const messageFormRef = useRef(null);
+  const messageInputRef = useRef(null);
+  const messageAreaRef = useRef(null);
+  const connectingElementRef = useRef(null);
+
+  useEffect(() => {
+    // Accessing the elements using refs in useEffect
+    const chatPage = chatPageRef.current;
+    const messageForm = messageFormRef.current;
+    const messageInput = messageInputRef.current;
+    const messageArea = messageAreaRef.current;
+    const connectingElement = connectingElementRef.current;
+
+  }, []);
+
+  function connect(event) {
+    username = sessionStorage.getItem("email");
+
+    if (username) {
+
+      chatPage.classList.remove('hidden');
+
+      var socket = new SockJS('/ws');
+      stompClient = Stomp.over(socket);
+
+      stompClient.connect({}, onConnected, onError);
+    }
+    event.preventDefault();
+  }
+
+  function onConnected() {
+    // Subscribe to the Public Topic
+    stompClient.subscribe('/topic/public', onMessageReceived);
+
+    // Tell your username to the server
+    stompClient.send("/app/chat.addUser",
+      {},
+      JSON.stringify({ sender: username, type: 'JOIN' })
+    )
+
+    connectingElement.classList.add('hidden');
+  }
+
+  function onError(error) {
+    connectingElement.textContent = 'Could not connect to WebSocket server. Please refresh this page to try again!';
+    connectingElement.style.color = 'red';
+  }
+
+  function sendMessage(event) {
+    var messageContent = inputMessage.trim();
+    if (messageContent && stompClient) {
+      var chatMessage = {
+        sender: username,
+        message: inputMessage,
+        type: 'CHAT'
+      };
+      stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
+      setInputMessage('');
+    }
+    event.preventDefault();
+  }
+
+  function onMessageReceived(payload) {
+    var message = JSON.parse(payload.body);
+
+    var messageElement = document.createElement('li');
+
+    if (message.type === 'JOIN') {
+      messageElement.classList.add('event-message');
+      message.content = message.sender + ' joined!';
+    } else if (message.type === 'LEAVE') {
+      messageElement.classList.add('event-message');
+      message.content = message.sender + ' left!';
+    } else {
+      messageElement.classList.add('chat-message');
+
+      var avatarElement = document.createElement('i');
+      var avatarText = document.createTextNode(message.sender[0]);
+      avatarElement.appendChild(avatarText);
+      avatarElement.style['background-color'] = getAvatarColor(message.sender);
+
+      messageElement.appendChild(avatarElement);
+
+      var usernameElement = document.createElement('span');
+      var usernameText = document.createTextNode(message.sender);
+      usernameElement.appendChild(usernameText);
+      messageElement.appendChild(usernameElement);
+    }
+
+    var textElement = document.createElement('p');
+    var messageText = document.createTextNode(message.content);
+    textElement.appendChild(messageText);
+
+    messageElement.appendChild(textElement);
+
+    messageArea.appendChild(messageElement);
+    messageArea.scrollTop = messageArea.scrollHeight;
+  }
+
+  function getAvatarColor(messageSender) {
+    var hash = 0;
+    for (var i = 0; i < messageSender.length; i++) {
+      hash = 31 * hash + messageSender.charCodeAt(i);
+    }
+    var index = Math.abs(hash % colors.length);
+    return colors[index];
+  }
+
+  messageForm.addEventListener('submit', sendMessage, true)
+
+  // const sendMessage = async (e) => {
+  //   e.preventDefault()
+  //   if (inputMessage.trim() !== '') {
+
+  //     const newMessage = {
+  //       senderEmail: sessionStorage.getItem("email"),
+  //       receiverEmail: props.doctorEmail,
+  //       messageContent: inputMessage,
+  //     };
+
+  //     const headers = {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json'
+  //     };
+
+  //     try {
+  //       await axios.post(`http://localhost:8093/messages/send-message?senderEmail=${newMessage.senderEmail}&receiverEmail=${newMessage.receiverEmail}&messageContent=${newMessage.messageContent}`, { headers });
+  //       setMessages([...messages, newMessage]);
+  //       setInputMessage('');
+  //     } catch (error) {
+  //       console.error('Error sending message:', error);
+  //     }
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   const fetchMessages = async () => {
+  //     try {
+  //       const senderResponse = await axios.get(`http://localhost:8093/messages/get-messages?senderEmail=${sessionStorage.getItem("email")}&receiverEmail=${props.doctorEmail}`);
+  //       const receiverResponse = await axios.get(`http://localhost:8093/messages/get-messages?senderEmail=${props.doctorEmail}&receiverEmail=${sessionStorage.getItem("email")}`);
+  //       // setMessages(response.data);
+  //       // console.log(response.data);
+
+  //       const senderMessages = senderResponse.data;
+  //       const receiverMessages = receiverResponse.data;
+
+  //       const combinedMessages = [];
+  //       const maxLength = Math.max(senderMessages.length, receiverMessages.length);
+
+  //       for (let i = 0; i < maxLength; i++) {
+  //         if (senderMessages[i]) {
+  //           combinedMessages.push(senderMessages[i]);
+
+  //         }
+  //         if (receiverMessages[i]) {
+  //           combinedMessages.push(receiverMessages[i]);
+  //         }
+  //       }
+
+  //       setMessagesAlternating(combinedMessages);
+
+  //     } catch (error) {
+  //       console.error('Error fetching messages:', error);
+  //     }
+  //   };
+
+  //   fetchMessages();
+  // }, [props.doctorEmail]);
+
+  return (
+    <div ref={chatPageRef} id='chat-page' class='hidden'>
+      <div className='chatArea-container'>
+        <div className='chatArea-header'>
+          {/* <p className='icon'>
+            {props.doctorName[0]}
+          </p>
+          <div className='header-text'>
+            <p className='name'>
+              {props.doctorName}
+            </p>
+          </div> */}
+          <h2> Message Here to Doctor</h2>
+        </div>
+        <div ref={connectingElementRef} class='connecting'>
+          Connecting....
+        </div>
+        <ul ref={messageAreaRef} id='meesageArea'>
+
+        </ul>
+        <form ref={messageFormRef} id='messageForm' name='messageForm'>
+          <div class='form-group'>
+
+            <div className='input-area'>
+              <TextField id="messageInput" fullWidth
+                label="Type a message"
+                variant="standard"
+                sx={{ mb: 1 }}
+                value={inputMessage}
+                ref={messageInputRef}
+                class='form-control'
+              // onChange={(e) => setInputMessage(e.target.value)}
+              />
+              <button type="submit" class="primary">Send</button>
+
+            </div>
+          </div>
+
+        </form>
+        {/* <div className='messages-area'>
+        {messagesAlternating.slice(0).map((message, index) => (    
+          <div key={index}>
+             {message.senderEmail === sessionStorage.getItem('email') ? (
+              <SelfMessage name={message.senderEmail} messageContent={message.messages} />
+            ) : (
+              <OthersMessage name={message.senderEmail} messageContent={message.messages} />
+            )}
+          </div>
+        ))}
+        </div> */}
+
+        {/* {messages.map((message) => (
+          <>
+            <SelfMessage key={message.id} name={message.senderEmail} messageContent={message.messages} />
+
+            <OthersMessage key={message.id} name={message.receiverEmail} messageContent={message.messages} />
+          </>
+        ))} */}
+
+        {/* <div className='messages-area'>
+
+        </div> */}
+
+        {/* <div className='input-area'>
+          <TextField id="messageInput" fullWidth
+            label="Type a message"
+            variant="standard"
+            sx={{ mb: 1 }}
+            value={inputMessage}
+          // onChange={(e) => setInputMessage(e.target.value)}
+          />
+          <IconButton
+          // onClick={sendMessage}
+          >
+            <SendIcon />
+          </IconButton>
+        </div> */}
+      </div>
+    </div>
+  )
+}
+
+export default MessagesArea

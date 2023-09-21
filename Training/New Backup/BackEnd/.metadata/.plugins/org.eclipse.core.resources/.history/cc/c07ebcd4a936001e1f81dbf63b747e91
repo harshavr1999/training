@@ -1,0 +1,16 @@
+package backend.medicalservice.Messages.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.Messages.entities.MessageEO;
+
+@Service
+public interface MessageService {
+	
+public void receiveAndStoreMessage(String senderEmail, String receiverEmail, String messageContent);
+	
+	public List<MessageEO> getMessagesBySenderAndReceiverEmails(String senderEmail, String receiverEmail);
+
+}

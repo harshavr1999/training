@@ -1,0 +1,7 @@
+package backend.medicalservice.services.impl;
+
+import backend.medicalservice.services.DoctorService;
+
+public class DoctorServiceImpl implements DoctorService {
+
+}

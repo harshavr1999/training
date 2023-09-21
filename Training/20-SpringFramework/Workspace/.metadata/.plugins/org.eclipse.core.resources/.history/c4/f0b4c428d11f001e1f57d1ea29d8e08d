@@ -1,0 +1,81 @@
+package training.iqgateway.business.impl;
+
+import java.util.List;
+
+import training.iqgateway.business.AdminOperations;
+import training.iqgateway.entity.RoleEO;
+import training.iqgateway.entity.UserEO;
+
+public class AdminOperationsImpl implements AdminOperations {
+
+	public RoleEO roleEoRef;
+	
+	public AdminOperationsImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	
+//	@Override
+//	public Integer addUser(UserEO userEORef) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Integer modifyUser(UserEO userEORef) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Integer removeUser(UserEO userEORef) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<UserEO> allUsers() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+	public RoleEO getRoleEoRef() {
+		return roleEoRef;
+	}
+
+	public void setRoleEoRef(RoleEO roleEoRef) {
+		this.roleEoRef = roleEoRef;
+	}
+
+	public AdminOperationsImpl(RoleEO roleEoRef) {
+		super();
+		this.roleEoRef = roleEoRef;
+	}
+
+	@Override
+	public Integer addRole(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		System.out.println(1 +" role added");
+		return 1;
+	}
+
+	@Override
+	public Integer modifyRole(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		System.out.println(1 +" role modified");
+		return 1;
+	}
+
+	@Override
+	public Integer removeRole(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		System.out.println(1 +" role deleted");
+		return 1;
+	}
+
+	@Override
+	public List<RoleEO> allRoles(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

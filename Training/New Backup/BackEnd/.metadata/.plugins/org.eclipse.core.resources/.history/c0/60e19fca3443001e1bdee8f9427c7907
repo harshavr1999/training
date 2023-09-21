@@ -1,0 +1,37 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.AdminClerk.entities.FeedbackEO;
+import backend.medicalservice.AdminClerk.entities.PatientEO;
+import backend.medicalservice.AdminClerk.repositories.FeedbackRepository;
+import backend.medicalservice.AdminClerk.services.FeedbackService;
+
+@Service
+public class FeedbackServiceImpl implements FeedbackService {
+	
+	@Autowired FeedbackRepository feedbackRepRef;
+
+	@Override
+	public void addFeedback(FeedbackEO feedback) {
+		// TODO Auto-generated method stub
+		feedbackRepRef.save(feedback);
+	}
+
+	@Override
+	public List<FeedbackEO> feedbackList() {
+		// TODO Auto-generated method stub
+		List<FeedbackEO> feedbacks = new ArrayList<>();
+		feedbackRepRef.findAll().forEach(feedbacks::add);
+		
+		return feedbacks;
+	}
+	
+	
+	
+
+}

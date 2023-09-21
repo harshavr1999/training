@@ -1,0 +1,76 @@
+/* Element Level Selector Will Be Used for HTML Elements */
+h1
+{
+    background-color: black;
+    color: red !important;
+}
+
+
+
+p
+{
+    color: blue;
+    font-size: 1.4em;
+    outline-style: double;
+    outline-width: 5px;
+}
+
+p , h1 
+{
+    text-transform: capitalize;
+}
+
+aside p{
+    color : pink;
+}
+
+/*  Class Level Selector  */
+.copyright
+{
+    font-size: smaller;
+    color: darkgreen;
+}
+
+.p 
+{
+    color: sienna;
+}
+
+
+/*  ID Selector Style Will Be Applied Only Once in the HTML */
+#section1
+{
+    background-color: darkred;
+}
+
+#section2 p 
+{
+    font-weight: bold;
+}
+
+input[required]
+{
+    background-color: yellow;
+}
+
+input[type="email"]
+{
+    border: 1px dashed red;
+}
+
+input[type=text]:focus
+{
+    background-color: #3b2f22;
+}
+
+a:active
+{
+    font-size: 150%;
+}
+
+.box
+{
+    margin: 150px;
+    border: 2px solid red;
+    padding: 100px;
+}

@@ -1,0 +1,9 @@
+package backend.medicalservice.Appointments.repositories;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import backend.medicalservice.Appointments.entities.AppointmentEO;
+
+public interface AppointmentRepository extends MongoRepository<AppointmentEO, String>{
+
+}

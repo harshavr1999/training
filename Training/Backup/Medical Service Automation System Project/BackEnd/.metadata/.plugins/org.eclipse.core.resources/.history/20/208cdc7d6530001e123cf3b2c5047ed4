@@ -1,0 +1,22 @@
+package backend.medicalservice.services.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import backend.medicalservice.entities.UserEO;
+import backend.medicalservice.repositories.UserRepository;
+import backend.medicalservice.services.UserService;
+
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserRepository userRepoRef;
+	
+	@Override
+	public List<UserEO> getAllUsers() {
+		// TODO Auto-generated method stub
+		return userRepoRef.findAll();
+	}
+
+}

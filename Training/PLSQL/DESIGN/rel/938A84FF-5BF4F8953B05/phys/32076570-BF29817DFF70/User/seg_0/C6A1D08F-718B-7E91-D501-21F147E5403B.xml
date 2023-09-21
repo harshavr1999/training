@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="TMS" directorySegmentName="seg_0" id="C6A1D08F-718B-7E91-D501-21F147E5403B">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:51:42 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+</UserOraclev10g>

@@ -1,0 +1,6 @@
+package backend.medicalservice.Messages.services;
+
+public interface MessageConsumerService {
+
+	public void handleMessage(String message);
+}

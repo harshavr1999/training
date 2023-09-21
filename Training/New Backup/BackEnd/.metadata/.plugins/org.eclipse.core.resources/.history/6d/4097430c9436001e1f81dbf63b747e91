@@ -1,0 +1,41 @@
+package backend.medicalservice.Messages.controllers;
+
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RabbitMQConfig {
+	
+	@Bean
+    public DirectExchange myExchange() {
+        return new DirectExchange("my_exchange");
+    }
+
+    // Define queues
+    @Bean
+    public Queue queueForEventCreated() {
+        return new Queue("event.created.queue");
+    }
+
+    @Bean
+    public Queue queueForEventUpdated() {
+        return new Queue("event.updated.queue");
+    }
+
+    // Bind queues to the exchange with routing keys
+    @Bean
+    public Binding bindingEventCreated(Queue queueForEventCreated, DirectExchange myExchange) {
+        return BindingBuilder.bind(queueForEventCreated).to(myExchange).with("event.created");
+    }
+
+    @Bean
+    public Binding bindingEventUpdated(Queue queueForEventUpdated, DirectExchange myExchange) {
+        return BindingBuilder.bind(queueForEventUpdated).to(myExchange).with("event.updated");
+    }
+}
+	
+}

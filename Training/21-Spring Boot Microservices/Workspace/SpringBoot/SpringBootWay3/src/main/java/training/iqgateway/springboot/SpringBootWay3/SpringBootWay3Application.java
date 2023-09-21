@@ -1,0 +1,13 @@
+package training.iqgateway.springboot.SpringBootWay3;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootWay3Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootWay3Application.class, args);
+	}
+
+}

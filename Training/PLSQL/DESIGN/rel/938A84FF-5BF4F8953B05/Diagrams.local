@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="12CE8DF3-EB04-A717-9013-3669922A9DFD" name="TMS-Connection" visible="false"/>
+   <object objectType="sub_view" objectID="BDA84BD2-BF36-A17E-4240-FFD745015947" name="TMS-Connection - SubView_1" visible="false"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

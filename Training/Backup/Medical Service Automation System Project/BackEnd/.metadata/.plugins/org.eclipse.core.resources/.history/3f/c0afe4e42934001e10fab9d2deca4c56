@@ -1,0 +1,5 @@
+package backend.medicalservice.AdminClerk.repositories;
+
+public interface DoctorRepository {
+
+}

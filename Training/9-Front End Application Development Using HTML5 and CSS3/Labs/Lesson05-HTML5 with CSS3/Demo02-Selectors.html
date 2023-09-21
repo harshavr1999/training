@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        article{
+            color: darkcyan;
+            font-size: 1.4em;
+        }
+
+        h1,h3{
+            color: brown;
+            text-transform: uppercase;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        }
+        /* Child Selector */
+        /* nav>ul>li>a this can also be written */
+        nav ul li a{
+            color: darkgreen;
+            font-size: 1.4em;
+        }
+
+        /* class level style start with '.' */
+        .copyright{
+            font-size: smaller;
+        }
+
+        /* id level style start with '#' */
+        #article-1{
+            color: crimson;
+        }
+
+        /* General siblings [Younger ones(Many)]*/
+        h1~p{
+            color: black;
+        }
+        /* Adjacent siblings [Younger one(only one)]*/
+        h3+p{
+            color:cyan;
+        }
+
+        /* Attribute Selector */
+        input[required]{
+            background-color:darkmagenta
+        }
+
+        input[type="text"]{
+            border:2px dotted blue
+        }
+
+        /* Pseudo Selectors */
+        input[type="submit"]:hover{
+            cursor: wait;
+        }
+
+        input[type="email"]:focus{
+            background-color: aliceblue;
+        }
+        
+        a:active{
+            font-size: 200%;
+        }
+
+        #randomParagraph::first-letter{
+            font-size: 200%;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <p>Test Paragraph</p>
+        <h1>The Next Big Conference for Front End Developers</h1>
+        <p>Test Paragraph</p>
+        <p>Test Paragraph</p>
+        <h3>Join us this year</h3>
+        <p>Test Paragraph</p>
+    </header>
+
+    <!-- Navigation among the Pages -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Workshop</a></li>
+            <li><a href="#">Submit Proposals</a></li>
+        </ul>
+
+        <p id="randomParagraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae unde quas totam in consequuntur? Odio voluptatem nam, quam impedit voluptatum at placeat temporibus, illum consectetur alias hic dolorum tempore aliquid.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint aut, quod reiciendis quidem doloremque laborum architecto labore dicta minus ut ipsum temporibus ipsam porro minima. Similique omnis nihil veniam id.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet consequuntur, cupiditate incidunt culpa fugiat quos voluptatibus, ducimus nulla quis totam corporis porro aspernatur ratione perferendis distinctio ut tempora? Tempora, aut?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod ab magni adipisci est maxime in sed quos? Veritatis natus aut aspernatur laborum non, ad eveniet corporis hic quaerat consectetur.
+        </p>
+    </nav>
+
+    <!-- Section [Portions of the page] -->
+
+    <section id="section-1">
+        <header>
+            <h3>
+                Speakers
+            </h3>
+            <article id="article-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate quas iure dolores amet hic fugit doloribus minus, necessitatibus porro, corrupti consequatur accusamus accusantium fugiat iusto? Libero, modi? Ut, consequuntur.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati, sit recusandae eaque, quo dolores nulla aspernatur neque delectus nisi animi numquam ratione unde culpa ipsam fugiat illum. Maxime, quaerat!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id quo dolorem tempore excepturi quaerat officiis expedita assumenda perspiciatis debitis atque eveniet aspernatur ratione omnis velit, tenetur accusantium odio aut?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dicta praesentium, quia ullam cum porro repudiandae rerum cupiditate ratione, aperiam mollitia voluptates, facilis voluptate quae libero! Sequi, praesentium eveniet? Architecto.
+            </article>
+        </header>
+    </section>
+
+    <section id="section-2">
+        <header>
+            <h3>
+                Workshops
+            </h3>
+            <article id="article-2">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima cupiditate quas iure dolores amet hic fugit doloribus minus, necessitatibus porro, corrupti consequatur accusamus accusantium fugiat iusto? Libero, modi? Ut, consequuntur.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati, sit recusandae eaque, quo dolores nulla aspernatur neque delectus nisi animi numquam ratione unde culpa ipsam fugiat illum. Maxime, quaerat!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id quo dolorem tempore excepturi quaerat officiis expedita assumenda perspiciatis debitis atque eveniet aspernatur ratione omnis velit, tenetur accusantium odio aut?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dicta praesentium, quia ullam cum porro repudiandae rerum cupiditate ratione, aperiam mollitia voluptates, facilis voluptate quae libero! Sequi, praesentium eveniet? Architecto.
+            </article>
+        </header>
+    </section>
+
+    <section id="section-3">
+        <header>
+            <h3>
+                Submit Proposals
+            </h3>
+            <article>
+                <form>
+                    <table>
+                    <tr>
+                        <td>Name : </td>
+                        <td><input type="text" id="firstName"/></td>
+
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="email" required/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="submit"/></td>
+                    </tr>
+                    </table>
+                </form>
+            </article>
+        </header>
+    </section>
+
+    <!-- <footer class="copyright"> -->
+    <footer>
+        &copy; Copyright 2023, All Rights Reserved
+    </footer>
+
+</body>
+</html>

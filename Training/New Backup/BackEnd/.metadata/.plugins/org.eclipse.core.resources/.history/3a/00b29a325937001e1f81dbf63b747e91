@@ -1,0 +1,22 @@
+package backend.medicalservice.Messages.entities;
+
+public class ChatMessage {
+	private MessageType type;
+	private String message;
+	private String sender;
+	
+	public enum MessageType{
+		CHAT,
+		JOIN,
+		LEAVE
+	}
+	
+	public ChatMessage() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	
+	
+}

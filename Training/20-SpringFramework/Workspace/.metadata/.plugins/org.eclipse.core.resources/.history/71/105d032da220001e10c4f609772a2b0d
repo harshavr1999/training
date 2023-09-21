@@ -1,0 +1,28 @@
+package training.iqgateway.business.impl;
+
+import java.util.List;
+
+import training.iqgateway.business.AdminOperations;
+import training.iqgateway.entities.DepartmentEO;
+
+public class AdminOperationsImpl implements AdminOperations {
+
+	@Override
+	public Integer addDepartment(DepartmentEO deptEO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DepartmentEO> fetchAllDepartments() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DepartmentEO> fetchDepartmentsBasedonLocation(Integer locationId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

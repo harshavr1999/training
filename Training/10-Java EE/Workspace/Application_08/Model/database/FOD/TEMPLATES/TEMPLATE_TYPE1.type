@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<type xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">6a9ba032-7d07-4908-b279-64517b251d97</identifier>
+  </ID>
+  <name>TEMPLATE_TYPE1</name>
+  <authidCurrentUser>false</authidCurrentUser>
+  <collectionType></collectionType>
+  <final>true</final>
+  <instantiable>true</instantiable>
+  <schema>
+    <name>TEMPLATES</name>
+  </schema>
+  <source>/*
+ * To change this template comment, edit FOD.TEMPLATES.TEMPLATE_TYPE1
+ */
+CREATE OR REPLACE TYPE TEMPLATE_TYPE1 AS OBJECT 
+( /* TODO enter attribute and method declarations here */ 
+)</source>
+  <typeCode>OBJECT</typeCode>
+</type>

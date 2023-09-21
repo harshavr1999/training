@@ -1,0 +1,13 @@
+package backend.medicalservice.AdminClerk;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AdminClerkApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AdminClerkApplication.class, args);
+	}
+
+}

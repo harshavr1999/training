@@ -1,0 +1,51 @@
+ import java.util.*;
+
+public class TreeMapOper
+{
+	public static void main(String[] args) 
+	{
+		int iii=80;
+		
+		//String a=new Strin("Ani");
+		TreeMap t=new TreeMap();
+		t.put("Vasantha");
+		t.put("Anitha",new Float(50));
+		t.put("Ramya",new Integer(78));
+		t.put("Anju",new Integer(80));
+		t.put("Srijha",new Integer(67));
+		t.put("Anju",new Integer(67));
+
+		Set s=t.entrySet();
+		Iterator i=s.iterator();
+
+		System.out.println(" \n The Following are the marks scored by the Students : \n");
+
+		System.out.println("Names \t\tMarks\n");
+		while(i.hasNext())
+		{
+			Map.Entry e=(Map.Entry)i.next();
+			System.out.println(e.getKey() + "\t\t" +e.getValue());
+		}
+
+		if(t.containsKey("Srijha"))
+		{
+			System.out.println(" \n The Map Contains a Mapping for the entry 'Srijha'");
+		}
+		else
+		{
+			System.out.println("\n The Map does not contain any mapping for the entry 'Srijha'");
+
+		}
+
+		t.put("Srijha", new Integer(100));
+		i=s.iterator();
+		System.out.println("\n The Tree Map after the Change is :\n");
+		System.out.println("Names \t\tMarks\n");
+		while(i.hasNext())
+		{
+			Map.Entry e=(Map.Entry)i.next();
+			System.out.println(e.getKey() + "\t\t" +e.getValue());
+		}
+
+	}
+}

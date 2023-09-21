@@ -1,0 +1,30 @@
+package backend.medicalservice.entities;
+
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+/**
+ * 
+ * @author harshavardhan.reddy
+ * This is an chatEO entity 
+ */
+
+@Document(collection="chats")
+public class ChatEO {
+
+	@Id
+	private String chatId;
+	private String chatName;
+	
+	@DBRef
+	private List<UserEO> users;
+	
+	@DBRef
+	private MessageEO latestMessage;
+	
+	//timestamp
+}

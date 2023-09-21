@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="77314D61-57C8-153B-B331-3367A19A6133" schemaObject="63A0351D-F97E-5B38-1C22-F6952356D619" name="OFFENCE_DETAILS">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>7F9901CA-CA18-9170-425B-C9F9533BCFD6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OFFENCE_DETAILS_ID" id="59549DD9-A552-8725-0644-4F9786F6D323">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>8E67C399-378E-2097-CFAC-6BAE5FF0F41E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VEHICLE_NUMBER" id="1F56341D-05C5-DD4E-BDAF-7A7AE104E3EE">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>A4CBD046-AC90-2B42-210B-032790AB031A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OFFENCE_ID" id="EBCEF48C-EA94-837A-C237-CC4B71FB6EE5">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>F4E87CB5-B5C2-C038-2057-A95204C8BEA7</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C421DF83-F9FD-DE92-ABB6-D2B936C624DC" referredColumn="85CF3F11-71B6-27DE-7DA8-D7345524FBA3"/>
+</associations>
+</Column>
+<Column name="OFFENCE_TIMESTAMP" id="E7290E1F-6C99-1D80-E882-5919888D4F0C">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>522A610E-932C-CEF5-EA81-1211EF958449</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OFFENCE_PROOF" id="0E848580-5D63-971E-22AE-FD8E9E9B1310">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>DC3C9E62-B9DA-4DC5-FA32-2234B74A8A8E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATUS" id="E4B4435D-6B4A-50D8-7BD3-E6937145F1BD">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>45328BC1-E212-EA51-F3F3-DF05B0C21189</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REG_ID" id="F9E1B188-F956-DE1E-B76A-B568C4D9F8A6">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>5237657F-07F4-2668-C69F-A6F75D489924</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FF96079D-8120-724B-2A13-C2D51B41C0B9" name="OFFENCE_DETAILS_PK">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>10B028CE-2E23-4505-8692-3475573C5F44</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59549DD9-A552-8725-0644-4F9786F6D323"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8FE3702B-8D7B-0A92-2DCB-814AF9398FDE" schemaObject="63A0351D-F97E-5B38-1C22-F6952356D619" name="OFFENCE_DETAILS_PK">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>D58948CF-9360-0E36-2207-06E0525C2920</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59549DD9-A552-8725-0644-4F9786F6D323"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C71D715-FD5E-969C-C0F0-82E9D90CCAD5" name="OFFENCE_DETAILS_FK1">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBCEF48C-EA94-837A-C237-CC4B71FB6EE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

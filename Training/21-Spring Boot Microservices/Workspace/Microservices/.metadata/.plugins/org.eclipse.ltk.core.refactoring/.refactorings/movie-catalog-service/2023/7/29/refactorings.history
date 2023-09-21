@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring clone="true" comment="Infer generic type arguments on &apos;movie-catalog-service&apos;&#x0D;&#x0A;- Original project: &apos;movie-catalog-service&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     training.iqgateway.moviecatalogservice.resources.MovieCatalogResource.java&#x0D;&#x0A;- Assume clone() returns an instance of the receiver type&#x0D;&#x0A;- Leave unconstrained type arguments raw" description="Infer generic type arguments" element1="/src\/main\/java&lt;training.iqgateway.moviecatalogservice.resources{MovieCatalogResource.java" flags="6" id="org.eclipse.jdt.ui.infer.typearguments" leave="true" stamp="1689767575878" version="1.0"/>
+</session>

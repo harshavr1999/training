@@ -1,0 +1,9 @@
+package backend.medicalservice.AdminClerk.entities;
+
+import org.springframework.data.annotation.Id;
+
+public class DoctorEO {
+	
+	private 
+
+}

@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="OFFENCE_DETAILS" directorySegmentName="seg_0" id="77314D61-57C8-153B-B331-3367A19A6133">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>92DDE1D6-1AF8-813D-533A-19EACBC53FA2</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="OFFENCE_PROOF" id="0E848580-5D63-971E-22AE-FD8E9E9B1310">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VEHICLE_NUMBER" id="1F56341D-05C5-DD4E-BDAF-7A7AE104E3EE">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OFFENCE_DETAILS_ID" id="59549DD9-A552-8725-0644-4F9786F6D323">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATUS" id="E4B4435D-6B4A-50D8-7BD3-E6937145F1BD">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OFFENCE_TIMESTAMP" id="E7290E1F-6C99-1D80-E882-5919888D4F0C">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OFFENCE_ID" id="EBCEF48C-EA94-837A-C237-CC4B71FB6EE5">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REG_ID" id="F9E1B188-F956-DE1E-B76A-B568C4D9F8A6">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="OFFENCE_DETAILS_PK" id="8FE3702B-8D7B-0A92-2DCB-814AF9398FDE">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+<segment>1C77DB94-F796-4872-9270-CB538CB32E60</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="OFFENCE_DETAILS_FK1" id="6C71D715-FD5E-969C-C0F0-82E9D90CCAD5">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<lobStorages>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000020375C00005$$" id="888C19F9-6831-FE62-940B-F435B1C19F02">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>OFFENCE_PROOF</column>
+<logging>YES</logging>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+</LobStorage>
+</lobStorages>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OFFENCE_DETAILS_PK" id="FF96079D-8120-724B-2A13-C2D51B41C0B9">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<segment>1C77DB94-F796-4872-9270-CB538CB32E60</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+<existingIndex>8FE3702B-8D7B-0A92-2DCB-814AF9398FDE</existingIndex>
+<indexSegment>1C77DB94-F796-4872-9270-CB538CB32E60</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

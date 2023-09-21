@@ -1,0 +1,51 @@
+package backend.medicalservice.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.AdminClerk.entities.UserEO;
+import backend.medicalservice.repositories.UserRepository;
+import backend.medicalservice.services.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired UserRepository userRepRef;
+
+	public List<UserEO> getAllUsers() {
+		
+		List<UserEO> usersList = new ArrayList<UserEO>();
+		userRepRef.findAll().forEach(usersList::add);
+		
+		return usersList;
+	}
+
+	public void addUser(UserEO user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateUser(UserEO user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteUser(String email) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<String> userEmails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<String> getAllRoles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

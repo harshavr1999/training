@@ -1,0 +1,10 @@
+package backend.medicalservice.entities;
+
+/**
+ * 
+ * @author harshavardhan.reddy
+ * This is MessageEO entity
+ */
+public class MessageEO {
+	
+}

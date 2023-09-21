@@ -1,0 +1,67 @@
+package backend.medicalservice.AdminClerk.entities;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="feedback")
+public class FeedbackEO {
+	
+	@Id
+	private String id;
+	
+	private String doctorEmail;
+	private String patientEmail;
+	private String feedback;
+	
+	public FeedbackEO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public FeedbackEO(String id, String doctorEmail, String patientEmail, String feedback) {
+		super();
+		this.id = id;
+		this.doctorEmail = doctorEmail;
+		this.patientEmail = patientEmail;
+		this.feedback = feedback;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getDoctorEmail() {
+		return doctorEmail;
+	}
+
+	public void setDoctorEmail(String doctorEmail) {
+		this.doctorEmail = doctorEmail;
+	}
+
+	public String getPatientEmail() {
+		return patientEmail;
+	}
+
+	public void setPatientEmail(String patientEmail) {
+		this.patientEmail = patientEmail;
+	}
+
+	public String getFeedback() {
+		return feedback;
+	}
+
+	public void setFeedback(String feedback) {
+		this.feedback = feedback;
+	}
+
+	@Override
+	public String toString() {
+		return "FeedbackEO [id=" + id + ", doctorEmail=" + doctorEmail + ", patientEmail=" + patientEmail
+				+ ", feedback=" + feedback + "]";
+	}
+	
+	
+}

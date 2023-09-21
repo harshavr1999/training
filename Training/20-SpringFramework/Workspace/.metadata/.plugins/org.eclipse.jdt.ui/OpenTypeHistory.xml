@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Lesson02-WithoutSpring/src&lt;training.iqgateway.business{CurrencyConvertor.java[CurrencyConvertor" modifiers="513" timestamp="1688988118889"/>
+<typeInfo handle="=TmsPractice/src&lt;training.iqgateway.business{AdminOperations.java[AdminOperations" modifiers="513" timestamp="1689076087425"/>
+<typeInfo handle="=TmsPractice/C:\/Program Files\/Java\/jdk1.8.0_361\/jre\/lib\/rt.jar&lt;java.awt(Adjustable.class[Adjustable" modifiers="1537" timestamp="1681216696754"/>
+<typeInfo handle="=TmsPractice/src&lt;training.iqgateway.business{ClerkOperations.java[ClerkOperations" modifiers="513" timestamp="1689075853870"/>
+<typeInfo handle="=TmsPractice/src&lt;training.iqgateway.business{CopOperations.java[CopOperations" modifiers="513" timestamp="1689075846273"/>
+<typeInfo handle="=TmsPractice/src&lt;training.iqgateway.business{RtoOperations.java[RtoOperations" modifiers="513" timestamp="1689075911727"/>
+<typeInfo handle="=Lesson04-Spring-AOP/C:\/Users\/harshavardhan.reddy\/Downloads\/Training Softwares\/spring-5.3.5-dist\/spring-framework-5.3.5\/libs\/spring-aop-5.3.5.jar&lt;org.springframework.aop(MethodBeforeAdvice.class[MethodBeforeAdvice" modifiers="1537" timestamp="1615862082000"/>
+<typeInfo handle="=Lesson04-Spring-AOP/C:\/Users\/harshavardhan.reddy\/Downloads\/Training Softwares\/spring-5.3.5-dist\/spring-framework-5.3.5\/libs\/spring-aop-5.3.5.jar&lt;org.springframework.aop(AfterReturningAdvice.class[AfterReturningAdvice" modifiers="1537" timestamp="1615862082000"/>
+<typeInfo handle="=Lesson05-Spring-DAO-JDBC/src&lt;training.iqgateway.dao{DepartmentDAO.java[DepartmentDAO" modifiers="513" timestamp="1689136804951"/>
+<typeInfo handle="=Lesson06-Spring-ORM/src&lt;training.iqgateway.dao{DepartmentDAO.java[DepartmentDAO" modifiers="513" timestamp="1689154997875"/>
+<typeInfo handle="=Lesson06-Spring-ORM/src&lt;training.iqgateway.business{AdminOperations.java[AdminOperations" modifiers="513" timestamp="1689158864214"/>
+</typeInfoHistroy>

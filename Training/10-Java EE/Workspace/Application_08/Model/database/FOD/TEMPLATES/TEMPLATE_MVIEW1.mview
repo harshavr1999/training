@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<materializedView xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">a454ffcc-f15a-4c7c-8a05-93a838d2ed13</identifier>
+  </ID>
+  <name>TEMPLATE_MVIEW1</name>
+  <SQLQuery class="oracle.javatools.db.ora.OracleSQLQuery">
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <identifier class="java.lang.String">61f78492-5905-42f1-9605-7d04d922efda</identifier>
+    </ID>
+    <distinct>false</distinct>
+    <distinctSource></distinctSource>
+    <fromObjects>
+      <fromObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">1639da31-69c1-41c6-ad7e-2e12d6c50aa5</identifier>
+        </ID>
+        <expression class="oracle.javatools.db.sql.RelationUsage">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">5f4065e5-3db5-4187-a7a9-406a735a63cf</identifier>
+          </ID>
+          <objectID class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE1</name>
+            <identifier class="java.lang.String">05bee794-49a4-4262-b36c-f95be9b038db</identifier>
+            <schemaName>TEMPLATES</schemaName>
+            <type>TABLE</type>
+          </objectID>
+        </expression>
+      </fromObject>
+    </fromObjects>
+    <selectObjects>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">2a057f81-1ed3-4cda-9f5f-d0929030ba7c</identifier>
+        </ID>
+        <alias>ID</alias>
+        <expression class="oracle.javatools.db.sql.ColumnUsage">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">5bed5214-5c94-4027-9501-a6b016ebec65</identifier>
+          </ID>
+          <fromObjectID class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE1</name>
+            <identifier class="java.lang.String">1639da31-69c1-41c6-ad7e-2e12d6c50aa5</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">61f78492-5905-42f1-9605-7d04d922efda</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TEMPLATE_MVIEW1</name>
+                <identifier class="java.lang.String">a454ffcc-f15a-4c7c-8a05-93a838d2ed13</identifier>
+                <schemaName>TEMPLATES</schemaName>
+                <type>MATERIALIZED VIEW</type>
+              </parent>
+              <schemaName>TEMPLATES</schemaName>
+              <type>SQLQuery</type>
+            </parent>
+            <schemaName>TEMPLATES</schemaName>
+            <type>FROM</type>
+          </fromObjectID>
+          <objectID class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE1_ID</name>
+            <identifier class="java.lang.String">9c67ebb8-bb0b-4046-88d8-215ad4d0d96a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>TEMPLATE_TABLE1</name>
+              <identifier class="java.lang.String">05bee794-49a4-4262-b36c-f95be9b038db</identifier>
+              <schemaName>TEMPLATES</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>TEMPLATES</schemaName>
+            <type>COLUMN</type>
+          </objectID>
+          <outerJoin>false</outerJoin>
+          <qualified>false</qualified>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+    </selectObjects>
+    <queryString>SELECT TEMPLATE_TABLE1_ID ID FROM TEMPLATE_TABLE1</queryString>
+  </SQLQuery>
+  <buildType>IMMEDIATE</buildType>
+  <cache>false</cache>
+  <compression>false</compression>
+  <fastRefresh>NO</fastRefresh>
+  <keyType>UNSPECIFIED</keyType>
+  <lastRefreshType>COMPLETE</lastRefreshType>
+  <onPrebuilt>NONE</onPrebuilt>
+  <parallel>1</parallel>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <refreshMethod>COMPLETE</refreshMethod>
+  <refreshMode>DEMAND</refreshMode>
+  <rewrite>false</rewrite>
+  <rewriteType>NONE</rewriteType>
+  <rollbackSegmentType>NONE</rollbackSegmentType>
+  <schema>
+    <name>TEMPLATES</name>
+  </schema>
+  <staleness>FRESH</staleness>
+  <updatable>false</updatable>
+  <useNoIndex>false</useNoIndex>
+  <usingConstraints>ENFORCED</usingConstraints>
+</materializedView>

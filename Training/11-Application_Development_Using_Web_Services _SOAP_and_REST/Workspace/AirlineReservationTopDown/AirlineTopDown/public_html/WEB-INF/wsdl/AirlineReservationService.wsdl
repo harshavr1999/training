@@ -1,0 +1,100 @@
+<definitions
+     name="AirlineReservationService"
+     targetNamespace="http://iqgatway.training/"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://iqgatway.training/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://iqgatway.training/" schemaLocation="AirlineReservationPort_xsd_1.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="destination">
+        <part name="parameters" element="tns:destination"/>
+    </message>
+    <message name="destinationResponse">
+        <part name="parameters" element="tns:destinationResponse"/>
+    </message>
+    <message name="fromCity">
+        <part name="parameters" element="tns:fromCity"/>
+    </message>
+    <message name="fromCityResponse">
+        <part name="parameters" element="tns:fromCityResponse"/>
+    </message>
+    <message name="selectSeatNo">
+        <part name="parameters" element="tns:selectSeatNo"/>
+    </message>
+    <message name="selectSeatNoResponse">
+        <part name="parameters" element="tns:selectSeatNoResponse"/>
+    </message>
+    <message name="cancelReservation">
+        <part name="parameters" element="tns:cancelReservation"/>
+    </message>
+    <message name="cancelReservationResponse">
+        <part name="parameters" element="tns:cancelReservationResponse"/>
+    </message>
+    <portType name="AirlineReservation">
+        <operation name="destination">
+            <input message="tns:destination"/>
+            <output message="tns:destinationResponse"/>
+        </operation>
+        <operation name="fromCity">
+            <input message="tns:fromCity"/>
+            <output message="tns:fromCityResponse"/>
+        </operation>
+        <operation name="selectSeatNo">
+            <input message="tns:selectSeatNo"/>
+            <output message="tns:selectSeatNoResponse"/>
+        </operation>
+        <operation name="cancelReservation">
+            <input message="tns:cancelReservation"/>
+            <output message="tns:cancelReservationResponse"/>
+        </operation>
+    </portType>
+    <binding name="AirlineReservationPortBinding" type="tns:AirlineReservation">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="destination">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="fromCity">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="selectSeatNo">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="cancelReservation">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="AirlineReservationService">
+        <port name="AirlineReservationPort" binding="tns:AirlineReservationPortBinding">
+            <soap:address location="http://localhost:7101/AirlineReservationBottomUp-AirlineBottomUp-context-root/AirlineReservationPort"/>
+        </port>
+    </service>
+</definitions>

@@ -1,0 +1,17 @@
+2023-09-13 14:07:48,758 [Worker-82] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\Training\Hibernate\Practical\pom.xml
+2023-09-13 14:07:59,084 [Worker-82] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.hibernate:Practical:0.0.1-SNAPSHOT @ D:\Training\Hibernate\Practical\pom.xml.
+2023-09-13 14:08:02,375 [Worker-82] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Practical/src/main/java
+2023-09-13 14:08:02,385 [Worker-82] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Practical/src/test/java
+2023-09-13 14:08:05,506 [Worker-82] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 16 sec
+2023-09-13 14:08:07,074 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-13 14:08:07,075 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Training\Hibernate\Practical\src\main\resources
+2023-09-13 14:08:07,077 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-13 14:08:07,078 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Training\Hibernate\Practical\src\test\resources
+2023-09-13 14:26:26,517 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-13 14:26:26,526 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Training\Hibernate\Practical\src\main\resources
+2023-09-13 14:26:26,529 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-13 14:26:26,529 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Training\Hibernate\Practical\src\test\resources
+2023-09-13 14:28:15,251 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-13 14:28:15,252 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Training\Hibernate\Practical\src\main\resources
+2023-09-13 14:28:15,255 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-09-13 14:28:15,255 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Training\Hibernate\Practical\src\test\resources

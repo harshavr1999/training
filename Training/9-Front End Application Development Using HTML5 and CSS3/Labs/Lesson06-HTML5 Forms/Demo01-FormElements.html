@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements in HTML5</title>
+</head>
+
+<body>
+    <center>
+        <h2>Registration Form</h2>
+
+        <form action="#" method="GET">
+            <table>
+                <tr>
+                    <td style="text-align: right;"><label for="firstName">First Name : </label></td>
+                    <td><input type="text" name="firstName" id="firstName" maxlength="30"/></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><label for="lastName">Last Name : </label></td>
+                    <td><input type="text" name="lastName" id="lastName" value="Korrapati" readonly /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><label for="pwd">Password : </label></td>
+                    <td><input type="password" name="pwd" id="pwd" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Gender : </td>
+                    <td><input type="radio" name="gender" id="male" />
+                        <label for="male"> Male </label>
+
+                        <input type="radio" name="gender" id="female" />
+                        <label for="female"> Female </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;">Sports : </td>
+                    <td><input type="checkbox" name="sports" id="cricket" />
+                        <label for="cricket"> Cricket </label>
+
+                        <input type="checkbox" name="sports" id="football" />
+                        <label for="football"> Football </label>
+
+                        <input type="checkbox" name="sports" id="kabadi" />
+                        <label for="kabadi"> Kabadi </label>
+
+                        <input type="checkbox" name="sports" id="hockey" />
+                        <label for="hockey"> Hockey </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;"><label for="profilePic">Upload Profile Picture : </label></td>
+                    <td><input type="file" name="profilePic" id="profilePic" accept=".JPG" /></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;"><label for="city">City : </label></td>
+                    <td><select>
+                            <option value="Choose city">Choose city</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Chennai">Chennai</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;"><label for="email">Email :</label></td>
+                    <td><input type="email" name="email" id="email" placeholder="abc@xyz.com" /></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;"><label for="telephone">Telephone :</label></td>
+                    <td><input type="tel" name="telephone" id="telephone" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="abstract">Abstract : </label></td>
+                    <td><textarea id="abstract" name="abstract" rows="5" cols="70"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label for="favPlace">Favorite place : </label></td>
+                    <td>
+                        <input type="text" name="favPlace" id="favPlace" list="suggestions"/>
+                        <datalist id="suggestions">
+                            <option value="Bangalore">
+                            <option value="Hyderabad">
+                            <option value="Goa">
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="favColor">Favorite Color : </label></td>
+                    <!-- default color value is black. if we need we can specify as value="#FF00FF" only in hexidecimal format -->
+                    <td><input type="color" name="favColor" id="favColor" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="dateOfBirth">Date of Birth : </label></td>
+                    <!-- if we need we can specify value as value="1999-08-10"  -->
+                    <td><input type="date" name="dateOfBirth" id="dateOfBirth" /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="dateAndTime">Date and Time : </label></td>
+                    <!-- if we need we can specify value as value="1999-10-05 09:23" time should be in 24hr format  -->
+                    <td><input type="datetime-local" name="dateAndTime" id="dateAndTime"  /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="selectMonth">Month : </label></td>
+                    <!-- if we need we can specify value as value="2022-08"  -->
+                    <td><input type="month" name="selectMonth" id="selectMonth"  /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="numberChoose">Choose Number : </label></td>
+                    <td><input type="number" name="numberChoose" id="numberChoose" min="1" max="10" step="0.5"  /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="rangeChoose">Slide and Choose : </label></td>
+                    <td><input type="range" name="rangeChoose" id="rangeChoose" min="1" max="10" step="0.5"  /></td>
+                </tr>
+
+                <tr>
+                    <td><label for="onlyTime">Choose Time : </label></td>
+                    <td><input type="time" name="onlyTime" id="onlyTime" min="1" max="10" step="0.5"  /></td>
+                </tr>
+
+
+
+                <tr>
+                    <td><label for="websiteURL">Provide URL : </label></td>
+                    <td><input type="url" name="websiteURL" id="websiteURL" min="1" max="10" step="0.5"  /></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;"><input type="reset" value="Reset" /></td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+
+
+
+        </form>
+
+    </center>
+
+</body>
+
+</html>

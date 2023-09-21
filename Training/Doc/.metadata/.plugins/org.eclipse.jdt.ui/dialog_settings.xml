@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="javadoc">
+		<item value="public" key="access"/>
+		<item value="false" key="noindex"/>
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="true" key="use"/>
+		<item value="true" key="author"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="false" key="nonavbar"/>
+		<item value="" key="docletpath"/>
+		<item value="C:\Program Files\Java\jdk1.8.0_361\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="1.8" key="source"/>
+		<item value="true" key="version"/>
+		<item value="" key="docletname"/>
+		<item value="true" key="splitindex"/>
+		<item value="true" key="fromStandard"/>
+		<item value="false" key="notree"/>
+		<item value="D:\Training\Doc\Java Documentation" key="destdir"/>
+		<item value="false" key="openinbrowser"/>
+		<section name="projects">
+			<section name="AdminClerk">
+				<item value="D:\Training\Medical Service Automation System Project\BackEnd\AdminClerk\javadoc.xml" key="antpath"/>
+				<item value="D:\Training\Doc\JavaDocs" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Messages">
+				<item value="D:\Training\New Backup\BackEnd\Messages\javadoc.xml" key="antpath"/>
+				<item value="D:\Training\New Backup\BackEnd\Messages\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Appointments">
+				<item value="D:\Training\New Backup\BackEnd\Appointments\javadoc.xml" key="antpath"/>
+				<item value="D:\Training\New Backup\BackEnd\Appointments\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="RemoteSystemsTempFiles">
+				<item value="D:\Training\Doc\RemoteSystemsTempFiles\javadoc.xml" key="antpath"/>
+				<item value="D:\Training\Doc\RemoteSystemsTempFiles\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+		</section>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="1022" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="836" key="DIALOG_HEIGHT"/>
+		<item value="460" key="DIALOG_X_ORIGIN"/>
+		<item value="11" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

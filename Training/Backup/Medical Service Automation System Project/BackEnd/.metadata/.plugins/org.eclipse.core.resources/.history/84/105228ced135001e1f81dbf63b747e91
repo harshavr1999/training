@@ -1,0 +1,19 @@
+package backend.medicalservice.Appointments.entities;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="billing")
+public class BillingEO {
+	
+	@Id
+	private String id;
+	private String aadharNumber;
+	private String patientName;
+	private Long mobileNo;
+	private String insurance;
+	private String policyNumber;
+	private Float totalBill;
+	private String paymentMode;
+	
+}

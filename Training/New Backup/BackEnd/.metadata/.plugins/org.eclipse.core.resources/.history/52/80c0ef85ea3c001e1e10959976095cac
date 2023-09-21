@@ -1,0 +1,19 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import backend.medicalservice.AdminClerk.entities.FeedbackEO;
+import backend.medicalservice.AdminClerk.repositories.FeedbackRepository;
+import backend.medicalservice.AdminClerk.services.FeedbackService;
+
+public class FeedbackServiceImpl implements FeedbackService {
+	
+	@Autowired FeedbackRepository feedbackRepRef;
+
+	@Override
+	public void addFeedback(FeedbackEO feedback) {
+		// TODO Auto-generated method stub
+		feedbackRepRef.save(feedback);
+	}
+
+}

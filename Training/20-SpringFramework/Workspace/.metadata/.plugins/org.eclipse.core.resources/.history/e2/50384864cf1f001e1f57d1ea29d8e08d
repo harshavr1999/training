@@ -1,0 +1,59 @@
+package training.iqgateway.business.impl;
+
+import java.util.List;
+
+import training.iqgateway.business.AdminOperations;
+import training.iqgateway.entity.RoleEO;
+import training.iqgateway.entity.UserEO;
+
+public class AdminOperationsImpl implements AdminOperations {
+
+//	@Override
+//	public Integer addUser(UserEO userEORef) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Integer modifyUser(UserEO userEORef) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Integer removeUser(UserEO userEORef) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<UserEO> allUsers() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
+	@Override
+	public Integer addRole(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer modifyRole(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer removeRole(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RoleEO> allRoles(RoleEO roleEORef) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

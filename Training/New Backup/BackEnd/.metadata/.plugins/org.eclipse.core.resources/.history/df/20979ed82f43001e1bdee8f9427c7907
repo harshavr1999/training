@@ -1,0 +1,65 @@
+package backend.medicalservice.AdminClerk.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import backend.medicalservice.AdminClerk.entities.DoctorEO;
+import backend.medicalservice.AdminClerk.services.DoctorService;
+
+@RestController
+@RequestMapping("/doctor")
+public class DoctorController {
+	
+	@Autowired DoctorService doctorServiceRef;
+	
+	@GetMapping("/allDoctors")
+	public List<DoctorEO> fetchAllDoctors(){
+		return doctorServiceRef.getAllDoctors();
+	}
+	
+	@PostMapping("/addDoctor")
+	public void addDoctor(@RequestBody DoctorEO doctor){
+		doctorServiceRef.addDoctor(doctor);
+	}
+	
+	@PutMapping("/updateDoctor/{email}")
+	public void updateDoctor(@PathVariable("email") String email, @RequestBody DoctorEO updatedDoctor){
+		doctorServiceRef.updateDoctorByEmail(email, updatedDoctor);
+	}
+	
+	@DeleteMapping("/deleteDoctor/{email}")
+	public void deleteDoctor(@PathVariable("email") String email){
+		doctorServiceRef.deleteDoctor(email);
+	}
+	
+	@GetMapping("/doctorDetails/{email}")
+	public DoctorEO fetchDoctorDetails(@PathVariable("email") String email){
+		return doctorServiceRef.getDoctorByEmail(email);
+	}
+	
+	@GetMapping("/allEmails")
+	public List<String> fetchAllEmails(){
+		return doctorServiceRef.allEmails();
+	}
+	
+	@GetMapping("/doctorsByDepartment/{department}")
+	public List<DoctorEO> fetchDoctorsByDepartments(@PathVariable("department") String department){
+		return doctorServiceRef.getDoctorsByDepartment(department);
+	}
+	
+	@GetMapping("/allDepartments")
+	public List<String> fetchAllDepartments(){
+		return doctorServiceRef.allDepartments();
+	}
+	
+	
+}

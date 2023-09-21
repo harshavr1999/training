@@ -1,0 +1,40 @@
+package training.iqgateway.dao.impl;
+
+import java.util.List;
+
+import training.iqgateway.dao.DepartmentDAO;
+import training.iqgateway.entities.DepartmentEO;
+
+public class DepartmentDAOImpl implements DepartmentDAO {
+
+	@Override
+	public int insertDepartment(DepartmentEO departmentEORef) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateDepartment(DepartmentEO departmentEORef) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteDepartment(Integer departmentId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public DepartmentEO findDepartmentById(Integer departmentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DepartmentEO> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

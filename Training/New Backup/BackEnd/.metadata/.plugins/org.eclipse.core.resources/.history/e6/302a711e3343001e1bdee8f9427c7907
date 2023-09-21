@@ -1,0 +1,9 @@
+package backend.medicalservice.AdminClerk.repositories;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import backend.medicalservice.AdminClerk.entities.FeedbackEO;
+
+public interface FeedbackRepository extends MongoRepository<FeedbackEO, String>{
+
+}

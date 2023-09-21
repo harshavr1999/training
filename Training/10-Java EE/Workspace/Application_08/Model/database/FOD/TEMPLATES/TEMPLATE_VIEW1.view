@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<view xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">38638b8c-a99e-48f7-ae58-ce9ae407bb98</identifier>
+  </ID>
+  <name>TEMPLATE_VIEW1</name>
+  <SQLQuery class="oracle.javatools.db.ora.OracleSQLQuery">
+    <ID class="oracle.javatools.db.IdentifierBasedID">
+      <identifier class="java.lang.String">0fa7cbec-97d1-4a13-aa28-c93c69b1e329</identifier>
+    </ID>
+    <distinct>false</distinct>
+    <distinctSource></distinctSource>
+    <fromObjects>
+      <fromObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">589d897b-cc85-4dcf-9e21-38f8da128f5a</identifier>
+        </ID>
+        <expression class="oracle.javatools.db.sql.RelationUsage">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">cd2d8753-aeff-4d7c-9641-1140e2221dac</identifier>
+          </ID>
+          <objectID class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE1</name>
+            <identifier class="java.lang.String">05bee794-49a4-4262-b36c-f95be9b038db</identifier>
+            <schemaName>TEMPLATES</schemaName>
+            <type>TABLE</type>
+          </objectID>
+        </expression>
+      </fromObject>
+    </fromObjects>
+    <selectObjects>
+      <selectObject>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">6f370e6b-786e-44d7-b1fb-8f187108b41f</identifier>
+        </ID>
+        <alias>ID</alias>
+        <expression class="oracle.javatools.db.sql.ColumnUsage">
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">261841e8-6d1b-46de-91b2-8e6ecf765d44</identifier>
+          </ID>
+          <fromObjectID class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE1</name>
+            <identifier class="java.lang.String">589d897b-cc85-4dcf-9e21-38f8da128f5a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">0fa7cbec-97d1-4a13-aa28-c93c69b1e329</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TEMPLATE_VIEW1</name>
+                <identifier class="java.lang.String">38638b8c-a99e-48f7-ae58-ce9ae407bb98</identifier>
+                <schemaName>TEMPLATES</schemaName>
+                <type>VIEW</type>
+              </parent>
+              <schemaName>TEMPLATES</schemaName>
+              <type>SQLQuery</type>
+            </parent>
+            <schemaName>TEMPLATES</schemaName>
+            <type>FROM</type>
+          </fromObjectID>
+          <objectID class="oracle.javatools.db.IdentifierBasedID">
+            <name>TEMPLATE_TABLE1_ID</name>
+            <identifier class="java.lang.String">9c67ebb8-bb0b-4046-88d8-215ad4d0d96a</identifier>
+            <parent class="oracle.javatools.db.IdentifierBasedID">
+              <name>TEMPLATE_TABLE1</name>
+              <identifier class="java.lang.String">05bee794-49a4-4262-b36c-f95be9b038db</identifier>
+              <schemaName>TEMPLATES</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>TEMPLATES</schemaName>
+            <type>COLUMN</type>
+          </objectID>
+          <outerJoin>false</outerJoin>
+          <qualified>false</qualified>
+        </expression>
+        <useAs>false</useAs>
+      </selectObject>
+    </selectObjects>
+    <queryString>SELECT TEMPLATE_TABLE1_ID ID FROM TEMPLATE_TABLE1</queryString>
+  </SQLQuery>
+  <forceOnCreate>false</forceOnCreate>
+  <schema>
+    <name>TEMPLATES</name>
+  </schema>
+</view>

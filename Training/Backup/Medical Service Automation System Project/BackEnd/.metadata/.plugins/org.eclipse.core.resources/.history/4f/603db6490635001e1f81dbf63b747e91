@@ -1,0 +1,13 @@
+package backend.medicalservice.Appointments.services;
+
+import java.util.List;
+
+import backend.medicalservice.Appointments.entities.AppointmentEO;
+
+public interface AppointmentService {
+	
+	public List<AppointmentEO> getAllAppointments();
+	
+	public List<AppointmentEO> getAppointmentsByStatus(String status);
+
+}

@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="VEHICLE_DETAILS" directorySegmentName="seg_0" id="1A43AFEE-D14D-061D-9650-8B71ABC9EB81">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>92DDE1D6-1AF8-813D-533A-19EACBC53FA2</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="VEHICLE_ID" id="2D8B0898-BCC7-7537-DDE3-892EFBC4FE99">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENGINE_NUMBER" id="44F96968-0607-7FB0-7C35-6333506005E0">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ENGINE_CC" id="505A81A5-4574-B235-C8F0-6AED6115BF67">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VEHICLE_NAME" id="98816F63-6153-7DE2-5DDD-89754328ECF7">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COLOR" id="A98DCCF1-FA1F-4EFA-39F8-A7985EB8A2A8">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATE_OF_MANUFACTURE" id="AEF7A08E-271F-E37C-2320-3810B20C42AB">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CHASIS_NUMBER" id="C26CA45E-C817-A515-75DB-91DD51AE510A">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MODEL" id="DF126934-0B9B-552E-535B-C557E58D4794">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VEHICLE_TYPE" id="E82EDADE-AEB2-5484-A63B-BAF81FEA75AA">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="VEHICLE_DETAILS_PK" id="847E22D7-5421-0FF0-AF8B-EE2F47FCFEC6">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<schemaObject>63A0351D-F97E-5B38-1C22-F6952356D619</schemaObject>
+<segment>1C77DB94-F796-4872-9270-CB538CB32E60</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="VEHICLE_DETAILS_PK" id="2872B003-72F3-873C-78FF-E55660C9E677">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<segment>1C77DB94-F796-4872-9270-CB538CB32E60</segment>
+<tableSpace>D5F55B9E-A9BC-B1EB-A957-3265D79093EB</tableSpace>
+<existingIndex>847E22D7-5421-0FF0-AF8B-EE2F47FCFEC6</existingIndex>
+<indexSegment>1C77DB94-F796-4872-9270-CB538CB32E60</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

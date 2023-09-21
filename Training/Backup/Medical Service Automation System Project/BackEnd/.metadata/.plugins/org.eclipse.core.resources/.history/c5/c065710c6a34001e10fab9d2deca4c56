@@ -1,0 +1,19 @@
+package backend.medicalservice.AdminClerk.entities;
+
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="patient")
+public class PatientEO {
+	
+	@Id
+	private String id;
+	private String email;
+	private String firstName;
+	private String lastName;
+	private Date dateOfBirth;
+	private Long mobileNo;
+	private String gender;
+}

@@ -1,0 +1,5 @@
+package backend.medicalservice.controllers;
+
+public class MessageController {
+
+}

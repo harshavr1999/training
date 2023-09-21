@@ -1,0 +1,6 @@
+backend.medicalservice.AdminClerk
+backend.medicalservice.AdminClerk.controllers
+backend.medicalservice.AdminClerk.entities
+backend.medicalservice.AdminClerk.repositories
+backend.medicalservice.AdminClerk.services
+backend.medicalservice.AdminClerk.services.impl

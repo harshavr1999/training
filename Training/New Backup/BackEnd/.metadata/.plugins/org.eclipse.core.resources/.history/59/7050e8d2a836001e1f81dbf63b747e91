@@ -1,0 +1,22 @@
+package backend.medicalservice.Messages.services.impl;
+
+import java.util.List;
+
+import backend.medicalservice.Messages.entities.MessageEO;
+import backend.medicalservice.Messages.services.MessageService;
+
+public class MessageServiceImpl implements MessageService{
+
+	@Override
+	public void receiveAndStoreMessage(String senderEmail, String receiverEmail, String messageContent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<MessageEO> getMessagesBySenderAndReceiverEmails(String senderEmail, String receiverEmail) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

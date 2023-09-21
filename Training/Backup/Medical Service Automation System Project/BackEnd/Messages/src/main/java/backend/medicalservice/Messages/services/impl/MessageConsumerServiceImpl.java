@@ -1,0 +1,50 @@
+package backend.medicalservice.Messages.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import backend.medicalservice.Messages.controllers.RabbitMQConfig;
+import backend.medicalservice.Messages.entities.MessageEO;
+import backend.medicalservice.Messages.repositories.MessageRepository;
+import backend.medicalservice.Messages.services.MessageService;
+
+@Component
+public class MessageConsumerServiceImpl {
+
+	private final List<String> storedMessages = new ArrayList<>();
+	
+	@Autowired MessageRepository messageRepRef;
+	@Autowired MessageService messageServiceRef;
+
+//	@RabbitListener(queues = "event.created.queue")
+//	public void handleMessage(String message) {
+//		// TODO Auto-generated method stub
+//		storedMessages.add(message);
+//		System.out.println("Recieved : "+message);
+//		
+//	}
+	
+	public List<String> getStoredMessages() {
+        return storedMessages;
+    }
+	
+	@RabbitListener(queues = RabbitMQConfig.QUEUE_NAME)
+    public void receiveMessage(String message) {
+        
+        String[] messageParts = message.split(";");
+        String senderEmail = messageParts[0];
+        String receiverEmail = messageParts[1];
+        String messageContent = messageParts[2];
+        
+        System.out.println(message+" in consumer");
+        
+//        messageServiceRef.receiveAndStoreMessage(senderEmail, receiverEmail, messageContent);
+    }
+	
+	
+
+}

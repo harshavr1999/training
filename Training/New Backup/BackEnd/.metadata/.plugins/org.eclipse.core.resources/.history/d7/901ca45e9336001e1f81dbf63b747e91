@@ -1,0 +1,24 @@
+package backend.medicalservice.Messages.services.impl;
+
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.Messages.services.MessageProducerService;
+
+@Service
+public class MessageProducerServiceImpl implements MessageProducerService {
+
+	@Autowired AmqpTemplate amqpTemplate;
+	
+	
+	@Override
+	public void sendMessageWithTTL(String message, int ttlInMilliseconds) {
+        rabbitTemplate.convertAndSend("queue-name", message, messagePostProcessor -> {
+            messagePostProcessor.getMessageProperties().setExpiration(String.valueOf(ttlInMilliseconds));
+            return messagePostProcessor;
+        });
+    }
+
+}

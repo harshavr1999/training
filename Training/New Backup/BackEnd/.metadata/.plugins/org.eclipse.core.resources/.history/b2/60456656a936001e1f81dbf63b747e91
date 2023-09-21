@@ -1,0 +1,34 @@
+package backend.medicalservice.Messages.services.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import backend.medicalservice.Messages.entities.MessageEO;
+import backend.medicalservice.Messages.repositories.MessageRepository;
+import backend.medicalservice.Messages.services.MessageService;
+
+public class MessageServiceImpl implements MessageService{
+
+	@Autowired MessageRepository messageRepRef;
+
+public void receiveAndStoreMessage(String senderEmail, String receiverEmail, String messageContent) {
+        
+		MessageEO message = messageRepRef.findBySenderEmailAndReceiverEmail(senderEmail, receiverEmail);
+        
+		if (message == null) {
+	        message = new MessageEO();
+	        message.setSenderEmail(senderEmail);
+	        message.setReceiverEmail(receiverEmail);
+	    }
+		
+        message.getMessages().add(messageContent);
+        messageRepRef.save(message);
+    }
+	
+	public List<MessageEO> getMessagesBySenderAndReceiverEmails(String senderEmail, String receiverEmail) {
+        return messageRepRef.findMessagesBySenderEmailAndReceiverEmail(senderEmail, receiverEmail);
+    }
+	
+
+}

@@ -1,0 +1,20 @@
+class AppEntry 
+{
+	public static void main(String[] args) 
+	{
+		// 1. Declaration of an Array
+		Customer custArray[] = null;
+
+		custArray = new Customer(10);
+
+		System.out.println("Hello World!");
+	}
+}
+
+class Customer
+{
+	public Customer(int id)
+	{
+			System.out.println(id);
+	}
+}

@@ -1,0 +1,9 @@
+package backend.medicalservice.Messages.controllers;
+
+
+@Configuration
+public class RabbitMQConfig {
+	
+	@Bean
+	
+}

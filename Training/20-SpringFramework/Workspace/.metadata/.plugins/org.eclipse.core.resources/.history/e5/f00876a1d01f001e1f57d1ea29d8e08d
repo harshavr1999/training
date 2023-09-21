@@ -1,0 +1,25 @@
+package training.iqgateway.driver;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import training.iqgateway.business.AdminOperations;
+import training.iqgateway.business.CurrencyConvertor;
+import training.iqgateway.entity.RoleEO;
+
+public class DriverApp {
+	
+	public static void main(String[] args) {
+		
+		// Bringing IOC Container into Action
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("/beans.xml");
+		
+		// We Can Lookup for the Bean Instances
+		AdminOperations adminOprRef = (AdminOperations) appContext.getBean("ccBean");
+		
+		// We Can invoke the Business Logic
+		RoleEO roleEORef = new RoleEO();
+		System.out.println(adminOprRef.addRole(roleEORef));
+	
+	}
+}

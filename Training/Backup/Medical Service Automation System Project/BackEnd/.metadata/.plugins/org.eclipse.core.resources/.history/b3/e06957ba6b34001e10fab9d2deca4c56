@@ -1,0 +1,10 @@
+package backend.medicalservice.AdminClerk.repositories;
+
+import backend.medicalservice.AdminClerk.entities.PatientEO;
+
+public interface PatientRepository {
+	
+	PatientEO findByAadharNumber(String aadharNumber);
+	
+
+}

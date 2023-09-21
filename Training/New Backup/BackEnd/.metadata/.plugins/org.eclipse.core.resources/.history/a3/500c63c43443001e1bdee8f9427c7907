@@ -1,0 +1,85 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import backend.medicalservice.AdminClerk.entities.PatientEO;
+import backend.medicalservice.AdminClerk.repositories.PatientRepository;
+import backend.medicalservice.AdminClerk.services.PatientService;
+
+@Service
+public class PatientServiceImpl implements PatientService {
+
+	@Autowired PatientRepository patientRepRef;
+	
+	@Override
+	public List<PatientEO> getAllPatients() {
+
+		List<PatientEO> patientsList = new ArrayList<>();
+		patientRepRef.findAll().forEach(patientsList::add);
+		
+		return patientsList;
+	}
+
+	@Override
+	public void addpatient(PatientEO patient) {
+		// TODO Auto-generated method stub
+		patientRepRef.save(patient);
+	}
+
+	@Override
+	public void updatePatientByAadharNumber(String aadharNumber, PatientEO updatedPatient) {
+		
+		PatientEO patient = patientRepRef.findByAadharNumber(aadharNumber);
+		
+		patient.setFirstName(updatedPatient.getFirstName());
+		patient.setLastName(updatedPatient.getLastName());
+		patient.setDateOfBirth(updatedPatient.getDateOfBirth());
+		patient.setMobileNo(updatedPatient.getMobileNo());
+		patient.setGender(updatedPatient.getGender());
+		patient.setAddress(updatedPatient.getAddress());
+		patient.setInsurance(updatedPatient.getInsurance());
+		patient.setPolicyNumber(updatedPatient.getPolicyNumber());
+		
+		patientRepRef.save(patient);
+	}
+
+	@Override
+	public void deletePatient(String aadharNumber) {
+		
+		PatientEO patient = patientRepRef.findByAadharNumber(aadharNumber);
+		
+		patientRepRef.delete(patient);
+		
+	}
+
+	@Override
+	public PatientEO getPatientByAadharNumber(String aadharNumber) {
+		
+		PatientEO patient = patientRepRef.findByAadharNumber(aadharNumber);
+	
+		return patient;
+	}
+
+	@Override
+	public List<String> allAadharNumber() {
+		
+		List<PatientEO> patients = patientRepRef.findAll();
+		
+		List<String> allAadhars = patients.stream().map(PatientEO::getAadharNumber).collect(Collectors.toList());
+		
+		return allAadhars;
+	}
+
+	@Override
+	public PatientEO getPatientByEmail(String email) {
+		
+		PatientEO patient = patientRepRef.findByEmail(email);
+		
+		return patient;
+	}
+
+}

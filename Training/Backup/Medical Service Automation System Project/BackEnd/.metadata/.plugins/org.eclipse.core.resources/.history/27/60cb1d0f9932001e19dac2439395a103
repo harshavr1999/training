@@ -1,0 +1,7 @@
+package backend.medicalservice.services.impl;
+
+import backend.medicalservice.AdminClerk.services.PatientService;
+
+public class PatientServiceImpl implements PatientService {
+
+}

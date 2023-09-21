@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="training.iqgateway.business.CurrencyConvertorImpl"/>
+<fullyQualifiedTypeName name="training.iqgateway.business.Customer"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.UserEO"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationListener"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationEvent"/>
+<fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
+<fullyQualifiedTypeName name="entities.Customer"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.RoleEO"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.OffenceDetailsEO"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.VehicleDetailsEO"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.RegDetailsEO"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.OwnerDetailsEO"/>
+<fullyQualifiedTypeName name="training.iqgateway.entity.OffenceEO"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.BeanPropertyRowMapper"/>
+<fullyQualifiedTypeName name="training.iqgateway.rowmappers.DepartmentRowMapper"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="org.hibernate.query.Query"/>
+<fullyQualifiedTypeName name="training.iqgateway.dao.DepartmentDAO"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.BeanFactory"/>
+<fullyQualifiedTypeName name="training.iqgateway.business.AdminOperations"/>
+<fullyQualifiedTypeName name="training.iqgateway.entities.DepartmentEO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.support.WebApplicationContextUtils"/>
+<fullyQualifiedTypeName name="java.util.Currency"/>
+<fullyQualifiedTypeName name="training.iqgateway.business.CurrencyConvertor"/>
+</qualifiedTypeNameHistroy>

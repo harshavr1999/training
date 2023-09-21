@@ -1,0 +1,46 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import java.util.List;
+
+import backend.medicalservice.AdminClerk.entities.PatientEO;
+import backend.medicalservice.AdminClerk.services.PatientService;
+
+public class PatientServiceImpl implements PatientService {
+
+	@Override
+	public List<PatientEO> getAllPatients() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addpatient(PatientEO patient) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updatePatientByAadharNumber(String aadharNumber, PatientEO patient) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deletePatient(String aadharNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PatientEO getPatientByAadharNumber(String aadharNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> allAadharNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

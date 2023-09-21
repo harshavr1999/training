@@ -1,0 +1,5 @@
+package backend.medicalservice.repositories;
+
+public interface MessageRepository {
+
+}

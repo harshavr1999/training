@@ -1,0 +1,9 @@
+package training.iqgateway.business;
+
+import training.iqgateway.entity.OffenceDetailsEO;
+
+public interface CopOperations {
+	// Offences
+	public Integer addOffenceToVehicle();
+	public Integer clearOffence();
+}

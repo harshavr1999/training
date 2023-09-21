@@ -1,0 +1,56 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.AdminClerk.entities.UserEO;
+import backend.medicalservice.AdminClerk.repositories.UserRepository;
+import backend.medicalservice.AdminClerk.services.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired UserRepository userRepRef;
+
+	public List<UserEO> getAllUsers() {
+		
+		List<UserEO> usersList = new ArrayList<UserEO>();
+		userRepRef.findAll().forEach(usersList::add);
+		
+		return usersList;
+	}
+
+	public void addUser(UserEO user) {
+		userRepRef.save(user);
+	}
+
+	public void deleteUser(String email) {
+
+		UserEO user = userRepRef.findByEmail(email);
+		
+		userRepRef.delete(user);
+		
+	}
+
+	@Override
+	public void updateUserByEmail(String email, UserEO updatedUser) {
+		// TODO Auto-generated method stub
+		UserEO user = userRepRef.findByEmail(email);
+		
+			user.setPassword(updatedUser.getPassword());
+			user.setRoleName(updatedUser.getRoleName());
+		
+	}
+
+	@Override
+	public UserEO getUserByEmail(String email) {
+		
+		UserEO user = userRepRef.findByEmail(email);
+		
+		return user;
+	}
+
+}

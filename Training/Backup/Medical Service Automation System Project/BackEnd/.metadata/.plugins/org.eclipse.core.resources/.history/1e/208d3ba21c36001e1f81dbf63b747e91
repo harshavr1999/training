@@ -1,0 +1,7 @@
+package backend.medicalservice.Messages.services.impl;
+
+import backend.medicalservice.Messages.services.MessageConsumerService;
+
+public class MessageConsumerServiceImpl implements MessageConsumerService {
+
+}

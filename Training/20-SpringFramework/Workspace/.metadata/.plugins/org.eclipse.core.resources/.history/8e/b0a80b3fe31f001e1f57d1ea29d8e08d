@@ -1,0 +1,24 @@
+package training.iqgateway.business.impl;
+
+import training.iqgateway.business.CopOperations;
+import training.iqgateway.entity.OffenceDetailsEO;
+
+public class CopOperationsImpl implements CopOperations {
+	
+	public OffenceDetailsEO offenceDetailsRef; 
+
+	@Override
+	public Integer addOffenceToVehicle() {
+		// TODO Auto-generated method stub
+		System.out.println("Offence added to "+offenceDetailsRef.getVehicleNumber());
+		return null;
+	}
+
+	@Override
+	public Integer clearOffence() {
+		// TODO Auto-generated method stub
+		System.out.println("Offence cleared to "+offenceDetailsRef.getVehicleNumber());
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package backend.medicalservice.entities;
+
+public class MessageEO {
+
+}

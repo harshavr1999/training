@@ -1,0 +1,5 @@
+package backend.medicalservice.AdminClerk.entities;
+
+public class PatientEO {
+
+}

@@ -1,0 +1,71 @@
+package backend.medicalservice.Messages.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="messages")
+public class MessageEO {
+	
+	@Id
+	private String id;
+	private String senderEmail;
+	private String receiverEmail;
+	private List<String> messages = new ArrayList<String>();
+	
+	public MessageEO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public MessageEO(String id, String senderEmail, String receiverEmail, List<String> messages) {
+		super();
+		this.id = id;
+		this.senderEmail = senderEmail;
+		this.receiverEmail = receiverEmail;
+		this.messages = messages;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getSenderEmail() {
+		return senderEmail;
+	}
+
+	public void setSenderEmail(String senderEmail) {
+		this.senderEmail = senderEmail;
+	}
+
+	public String getReceiverEmail() {
+		return receiverEmail;
+	}
+
+	public void setReceiverEmail(String receiverEmail) {
+		this.receiverEmail = receiverEmail;
+	}
+
+	public List<String> getMessages() {
+		return messages;
+	}
+
+	public void setMessages(List<String> messages) {
+		this.messages = messages;
+	}
+
+	@Override
+	public String toString() {
+		return "MessageEO [id=" + id + ", senderEmail=" + senderEmail + ", receiverEmail=" + receiverEmail
+				+ ", messages=" + messages + "]";
+	}
+	
+	
+	
+	
+}

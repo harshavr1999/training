@@ -1,0 +1,52 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import java.util.List;
+
+import backend.medicalservice.AdminClerk.entities.DoctorEO;
+import backend.medicalservice.AdminClerk.services.DoctorService;
+
+public class DoctorServiceImpl implements DoctorService {
+
+	@Override
+	public List<DoctorEO> getAllDoctors() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addDoctor(DoctorEO doctor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateDoctorByEmail(String email, DoctorEO updatedDoctor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteDoctor(String email) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public DoctorEO getDoctorByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> allEmails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DoctorEO> getDoctorsByDepartment(String department) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+package backend.medicalservice.Appointments.services.impl;
+
+import backend.medicalservice.Appointments.services.PrescriptionService;
+
+public class PrescriptionServiceImpl implements PrescriptionService {
+
+}

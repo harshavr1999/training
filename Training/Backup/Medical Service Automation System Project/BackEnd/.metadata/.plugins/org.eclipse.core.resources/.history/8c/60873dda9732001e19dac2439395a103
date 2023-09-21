@@ -1,0 +1,40 @@
+package backend.medicalservice.services.impl;
+
+import java.util.List;
+
+import backend.medicalservice.entities.UserEO;
+import backend.medicalservice.services.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	public List<UserEO> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void addUser(UserEO user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateUser(UserEO user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteUser(String email) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<String> userEmails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<String> getAllRoles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

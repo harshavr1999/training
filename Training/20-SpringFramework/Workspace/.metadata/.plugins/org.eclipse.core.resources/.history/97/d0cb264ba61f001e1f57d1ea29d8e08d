@@ -1,0 +1,11 @@
+package training.iqgateway.driver;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DriverApp {
+	
+	public static void main(String[] args) {
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("/bean.xml");
+	}
+}

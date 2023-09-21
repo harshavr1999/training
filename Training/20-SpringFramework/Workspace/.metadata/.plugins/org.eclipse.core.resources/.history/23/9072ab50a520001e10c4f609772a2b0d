@@ -1,0 +1,13 @@
+package training.iqgateway.driver;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DriverApp {
+	public static void main(String[] args) {
+		BeanFactory beanFactoryRef = new ClassPathXmlApplicationContext("/applicationContext.xml");
+		
+		
+	
+	}
+}

@@ -1,0 +1,48 @@
+REM -- QUERY 7
+SELECT LAST_NAME || ' earns ' || SALARY || ' monthly but wants ' || (SALARY*3) "Dream Salaries"
+FROM EMPLOYEES;
+
+REM -- QUERY 8
+SELECT LAST_NAME, LPAD(SALARY,15,'$') "SALARY"
+FROM EMPLOYEES;
+
+REM -- QUERY 9
+SELECT LAST_NAME, HIRE_DATE,
+       TO_CHAR(NEXT_DAY(ADD_MONTHS(HIRE_DATE,6),'MONDAY'),'fmDay,"the" Ddspth "of" Month,YYYY') "REVIEW"
+FROM EMPLOYEES;
+
+REM -- QUERY 10
+SELECT LAST_NAME,HIRE_DATE, TO_CHAR(HIRE_DATE,'DAY') "DAY"
+FROM EMPLOYEES
+ORDER BY TO_CHAR(HIRE_DATE-1,'D');
+
+REM -- QUERY 11
+SELECT LAST_NAME, NVL(TO_CHAR(COMMISSION_PCT),'No Commission') "COMM"
+FROM EMPLOYEES;
+
+REM -- QUERY 12
+SELECT RPAD(LAST_NAME,8)||' '||RPAD(' ',SALARY/1000+1,'*') "EMPLOYEE_AND_THIER_SALARIES"
+FROM EMPLOYEES
+ORDER BY SALARY DESC;
+
+REM -- QUERY 13
+SELECT JOB_ID,
+       DECODE(JOB_ID,'AD_PRES','A',
+                      'ST_MAN','B',
+                      'IT_PROG','C',
+                      'SA_REP','D',
+                      'ST_CLERK','E',
+                      '0') "GRADE"
+FROM EMPLOYEES;
+
+REM -- QUERY 14
+
+SELECT JOB_ID,
+       CASE JOB_ID WHEN 'AD_PRESS' THEN 'A'
+                   WHEN 'ST_MAN' THEN 'B'
+                   WHEN 'IT_PROG' THEN 'C'
+                   WHEN 'SA_REP' THEN 'D'
+                   WHEN 'ST_CLERK' THEN 'E'
+                   ELSE '0'
+        END "GRADE"
+FROM EMPLOYEES;

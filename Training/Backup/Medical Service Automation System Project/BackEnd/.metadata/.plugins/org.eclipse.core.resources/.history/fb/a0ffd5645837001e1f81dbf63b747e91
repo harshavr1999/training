@@ -1,0 +1,5 @@
+package backend.medicalservice.Messages.listeners;
+
+public class WebSocketEventListener {
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Jul 13 10:54:45 IST 2023
+org.eclipse.jst.jee.server\:/binary\:D\:\\Training\\20-SpringFramework\\Workspace\\Lesson07-WebUI-Spring\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5.jar=WEB-INF/lib/spring-web-5.3.5.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Training\\20-SpringFramework\\Workspace\\Lesson07-WebUI-Spring\\WebContent\\WEB-INF\\lib\\spring-web-5.3.5-sources.jar=WEB-INF/lib/spring-web-5.3.5-sources.jar

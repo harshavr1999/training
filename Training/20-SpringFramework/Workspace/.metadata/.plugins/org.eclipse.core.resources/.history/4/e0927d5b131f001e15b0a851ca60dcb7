@@ -1,0 +1,36 @@
+package training.iqgateway.business;
+
+public class CurrencyConvertorImpl implements CurrencyConvertor {
+
+	@Override
+	public String dollorToRS(double dollars) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String poundsToRS(double pounds) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String riyalsToRS(double riyals) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String yensToRS(double yens) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String pesosToRS(double pesos) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

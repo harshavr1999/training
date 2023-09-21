@@ -1,0 +1,9 @@
+package training.iqgateway.business;
+
+public interface ClerkOperations {
+
+	// Offences
+	public Integer addOffenceToVehicle(OffenceDetailsEO offenceDetailsRef);
+	public Integer clearOffence(Integr offenceDetailsId);
+	public Void reportGeneration(String VehicleNumber);
+}

@@ -1,0 +1,13 @@
+package backend.medicalservice.AdminClerk.services;
+
+import java.util.List;
+
+import backend.medicalservice.AdminClerk.entities.FeedbackEO;
+
+public interface FeedbackService {
+
+	public void addFeedback(FeedbackEO feedback);
+	
+	public List<FeedbackEO> feedbackList();
+	
+}

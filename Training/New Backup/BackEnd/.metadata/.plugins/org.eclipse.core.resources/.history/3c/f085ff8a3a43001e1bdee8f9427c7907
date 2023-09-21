@@ -1,0 +1,28 @@
+package backend.medicalservice.Messages.services;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeoutException;
+
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.Messages.entities.MessageEO;
+
+public interface MessageService {
+
+	public void receiveAndStoreMessage(String senderEmail, String receiverEmail, String messageContent);
+
+	public List<MessageEO> getMessagesBySenderAndReceiverEmails(String senderEmail, String receiverEmail);
+
+	
+	public List<MessageEO> getMessagesBySenderEmail(String senderEmail);
+
+    public List<MessageEO> getMessagesByReceiverEmail(String receiverEmail);
+    
+    public boolean sendMessage(String messageContent, String QUEUE) throws IOException, TimeoutException;
+    
+    public String recieveMessage(String QUEUE)throws IOException, TimeoutException;
+    
+    public Integer getQueueSize(String Queue);
+	
+}

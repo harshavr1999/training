@@ -1,0 +1,27 @@
+package training.iqgateway.business.impl;
+
+import training.iqgateway.business.ClerkOperations;
+import training.iqgateway.entity.OffenceDetailsEO;
+
+public class ClerkOperationsImpl implements ClerkOperations {
+
+	@Override
+	public Integer addOffenceToVehicle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer clearOffence() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Void reportGeneration() {
+		// TODO Auto-generated method stub
+		System.out.println("Report Generated Successfully");
+		return null;
+	}
+
+}

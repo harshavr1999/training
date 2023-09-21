@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> HTML With JS </title>
+        <script>
+            var changeBox = function(event)
+            {
+                console.log(" Change Box Function Called ");
+                var box = document.getElementById("box");
+                box.style.backgroundColor = "#ff9966";
+                box.style.width = "280px";
+                box.style.float = "left";
+                box.style.borderStyle = "dotted";
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="changeBox()"> Change the Box Style</button>
+        <div id="box">
+            <h1> I am in a Box</h1>
+        </div>
+    </body>
+</html>

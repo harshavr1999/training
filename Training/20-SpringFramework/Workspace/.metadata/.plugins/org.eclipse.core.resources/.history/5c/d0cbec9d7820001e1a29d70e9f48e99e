@@ -1,0 +1,19 @@
+package training.iqgateway.driver;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import training.iqgateway.dao.DepartmentDAO;
+import training.iqgateway.entities.DepartmentEO;
+
+public class DriverApp {
+	
+	BeanFactory beanFactoryRef = new ClassPathXmlApplicationContext("applicationContext.xml");
+	
+	DepartmentDAO deptDAORef = (DepartmentDAO)beanFactoryRef.getBean("departmentDAOBean");
+	
+	DepartmentEO deptEORef = new DepartmentEO(330, "New Accounting", 100, 1700);
+	
+	deptDAORef.insertDepartment(deptEORef);
+	
+}

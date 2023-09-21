@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="roleBean" class="training.iqgateway.entity.RoleEO">
+		<property name="roleName" value="Admin"/>
+		<property name="roleDescription" value="The Administrater"/>
+	</bean>
+	
+	<bean id="adminOprBean" class="training.iqgateway.business.impl.AdminOperationsImpl"
+			scope="singleton">
+			
+		<!-- Setter Injection -->
+		<property name="roleEORef" ref="roleBean"/>
+		<!--  <constructor-arg ref="customerBean"/> -->
+		
+	</bean>
+	
+	<!-- Autowiring byName  -->
+	<!--<bean id="customerRef" class="training.iqgateway.business.Customer">
+		<property name="id" value="1001"/>
+		<property name="name" value="Harsha"/>
+		<property name="address" value="Bangalore"/>
+		<property name="phone" value="8739883773"/> 
+		
+	</bean> 
+	
+	<bean id="ccBean" class="training.iqgateway.business.CurrencyConvertorImpl"
+			scope="singleton" autowire="byName">
+			
+	</bean>
+	-->
+	
+	<!-- Autowiring byType  -->
+	<!--  
+	<bean id="customerBean1" class="training.iqgateway.business.Customer">
+		<property name="id" value="1001"/>
+		<property name="name" value="Harsha"/>
+		<property name="address" value="Bangalore"/>
+		<property name="phone" value="8739883773"/> 
+		
+	</bean>-->
+	
+	<!-- Autowiring byType  -->
+	<!-- 
+	<bean id="customerBean2" class="entities.Customer">
+		<property name="id" value="1002"/>
+		<property name="name" value="Korrapati"/>
+		<property name="address" value="Bangalore"/>
+		<property name="phone" value="8739883773"/> 
+		
+	</bean>
+	
+	<bean id="ccBean" class="training.iqgateway.business.CurrencyConvertorImpl"
+			scope="singleton" autowire="byType">
+			
+	</bean>
+	-->
+	
+	<!-- Autowiring byConstructor  -->
+	 <!--  
+	<bean id="customerBean1" class="training.iqgateway.business.Customer">
+		<property name="id" value="1001"/>
+		<property name="name" value="Harsha"/>
+		<property name="address" value="Bangalore"/>
+		<property name="phone" value="8739883773"/> 
+		
+	</bean>
+	-->
+	
+	<!-- Autowiring byConstructor  -->
+	<!-- 
+	<bean id="customerBean2" class="entities.Customer">
+		<property name="id" value="1002"/>
+		<property name="name" value="Korrapati"/>
+		<property name="address" value="Bangalore"/>
+		<property name="phone" value="8739883773"/> 
+		
+	</bean>
+	
+	<bean id="ccBean" class="training.iqgateway.business.CurrencyConvertorImpl"
+			scope="singleton" autowire="constructor">
+			
+	</bean>
+	 -->
+	
+	
+	
+
+</beans>

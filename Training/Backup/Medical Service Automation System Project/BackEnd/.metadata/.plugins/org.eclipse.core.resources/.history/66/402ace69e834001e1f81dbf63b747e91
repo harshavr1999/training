@@ -1,0 +1,5 @@
+package backend.medicalservice.Appointments.repositories;
+
+public interface PrescriptionRepository {
+
+}

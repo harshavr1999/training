@@ -1,0 +1,17 @@
+package backend.medicalservice.Messages.services.impl;
+
+
+@Service
+public class MessageProducerServiceImpl {
+
+	@Autowired AmqpTemplate amqpTemplate;
+	
+	
+	public void sendMessageWithTTL(String message, int ttlInMilliseconds) {
+		amqpTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_NAME, RabbitMQConfig.ROUTING_KEY, message, messagePostProcessor -> {
+            messagePostProcessor.getMessageProperties().setExpiration(String.valueOf(ttlInMilliseconds));
+            return messagePostProcessor;
+        });
+    }
+
+}

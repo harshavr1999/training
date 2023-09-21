@@ -1,0 +1,68 @@
+package backend.medicalservice.AdminClerk.controllers;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import backend.medicalservice.AdminClerk.entities.UserEO;
+import backend.medicalservice.AdminClerk.services.UserService;
+
+@RestController
+@RequestMapping("/user")
+@CrossOrigin
+public class UserController {
+	
+	@Autowired UserService userServiceRef;
+	
+	@GetMapping("/allUsers")
+	public List<UserEO> fetchAllUsers(){
+		return userServiceRef.getAllUsers();
+	}
+	
+	@PutMapping("/updateUser/{email}")
+	public void updateUser(@PathVariable("email") String email, @RequestBody UserEO updatedUser){
+		userServiceRef.updateUserByEmail(email, updatedUser);
+	}
+	
+	@DeleteMapping("/deleteUser/{email}")
+	public void deleteUser(@PathVariable("email") String email){
+		userServiceRef.deleteUser(email);
+	}
+	
+	@PostMapping("/addUser")
+	public void addUser(@RequestBody UserEO user){
+		userServiceRef.addUser(user);
+	}
+	
+	@GetMapping("/allEmails")
+	public List<String> fetchAllEmails(){
+		List<UserEO> users = userServiceRef.getAllUsers();
+		List<String> emails = users.stream().map(UserEO::getEmail).collect(Collectors.toList());
+		
+		return emails;
+	}
+	
+	@GetMapping("/allRoles")
+	public List<String> fetchAllRoles(){
+		List<UserEO> users = userServiceRef.getAllUsers();
+		List<String> roles = users.stream().map(UserEO::getRoleName).collect(Collectors.toList());
+		
+		return roles;
+	}
+	
+	@GetMapping("/userByEmail/{email}")
+	public UserEO findUserByEmail(@PathVariable("email") String email){
+		return userServiceRef.getUserByEmail(email);
+	}
+
+}

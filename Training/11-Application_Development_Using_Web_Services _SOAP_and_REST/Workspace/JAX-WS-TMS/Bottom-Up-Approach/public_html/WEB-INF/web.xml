@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+  <servlet>
+    <servlet-name>AdminOperationsPort</servlet-name>
+    <servlet-class>training.iqgateway.AdminOperations</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>ClerkOperationsPort</servlet-name>
+    <servlet-class>training.iqgateway.ClerkOperations</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>CopOperationsPort</servlet-name>
+    <servlet-class>training.iqgateway.CopOperations</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>RTOOperationsPort</servlet-name>
+    <servlet-class>training.iqgateway.RTOOperations</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminOperationsPort</servlet-name>
+    <url-pattern>/AdminOperationsPort</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClerkOperationsPort</servlet-name>
+    <url-pattern>/ClerkOperationsPort</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CopOperationsPort</servlet-name>
+    <url-pattern>/CopOperationsPort</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RTOOperationsPort</servlet-name>
+    <url-pattern>/RTOOperationsPort</url-pattern>
+  </servlet-mapping>
+</web-app>

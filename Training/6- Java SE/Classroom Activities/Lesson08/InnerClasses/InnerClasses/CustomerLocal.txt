@@ -1,0 +1,21 @@
+class CustomerLocal
+{
+	id
+	name
+	DateHandler dhObjRef;
+
+	public void handlerMethod()
+	{
+		int ageLimit = 12;
+		
+		class DateHandler
+		{
+			public void sayHello()
+			{
+				System.out.println("Hello);
+			}
+		}
+	}
+
+}
+		

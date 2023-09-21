@@ -1,0 +1,11 @@
+package backend.medicalservice.Appointments.repositories;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import backend.medicalservice.Appointments.entities.AppointmentEO;
+
+public interface AppointmentRepository extends MongoRepository<AppointmentEO, String>{
+	List<AppointmentEO> findByStatus(String status);
+}

@@ -1,0 +1,12 @@
+package training.iqgateway.entity;
+
+public class RegDetailsEO {
+    private String vehicleNumber;
+    private Date regDate;
+    private int ownerID;
+    private int vehicleID;
+    private String distributorName;
+      
+    public RegDetailsEO(){
+    }
+}

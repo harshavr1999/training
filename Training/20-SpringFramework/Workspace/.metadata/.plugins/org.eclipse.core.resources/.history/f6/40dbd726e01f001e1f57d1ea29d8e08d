@@ -1,0 +1,22 @@
+package training.iqgateway.business;
+
+import java.util.List;
+
+import training.iqgateway.entity.RoleEO;
+import training.iqgateway.entity.UserEO;
+
+public interface AdminOperations {
+	
+	// User 
+//	public Integer addUser();
+//	public Integer modifyUser();
+//	public Integer removeUser();
+//	public List<UserEO> allUsers();
+//	
+	// Role
+	public Integer addRole();
+	public Integer modifyRole();
+	public Integer removeRole();
+	public List<RoleEO> allRoles();
+	
+}

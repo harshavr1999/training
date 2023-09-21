@@ -1,0 +1,70 @@
+package training.iqgateway.business.impl;
+
+import training.iqgateway.business.RtoOperations;
+import training.iqgateway.entity.OffenceEO;
+import training.iqgateway.entity.OwnerDetailsEO;
+import training.iqgateway.entity.RegDetailsEO;
+import training.iqgateway.entity.VehicleDetailsEO;
+
+public class RtoOperationsImpl implements RtoOperations {
+	
+	public VehicleDetailsEO vehicleRef;
+	public RegDetailsEO regRef;
+	public OwnerDetailsEO ownerRef;
+	public OffenceEO offenceRef;
+
+	@Override
+	public Integer addVehicleDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer modifyVehicleDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer vehicleRegistration() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void transferVehicle() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Integer addOwner() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer modifyOwner() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer addOffence() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer modifyOffence() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer deleteOffence() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

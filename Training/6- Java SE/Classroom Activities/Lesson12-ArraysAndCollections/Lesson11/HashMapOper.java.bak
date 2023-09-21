@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class HashMapOper
+{
+	public static void main(String[] args) 
+	{
+		HashMap<String,Integer> h=new HashMap<String,Integer>();
+		//Customer c = new Customer();
+		//Customer c1 = new Customer();
+		//h.put(c,new Integer(90));
+		//h.put(c1,new Integer(10));
+		h.put("Vishal",90);
+		h.put("Shankar",new Integer(78));
+		h.put("Mukesh",new Integer(80));
+		h.put("Sonu Kumar",new Integer(90));
+		h.put("Shankar",new Integer(99));
+		
+
+		Set s=h.entrySet();
+		Iterator i=s.iterator();
+
+		System.out.println(" \n The Following are the marks scored by the Students : \n");
+
+		System.out.println("Names \t\tMarks\n");
+		while(i.hasNext())
+		{
+			Map.Entry e=(Map.Entry)i.next();
+			System.out.println(e.getKey() + "\t\t" +e.getValue());
+		}
+
+		h.put("Srijha", new Integer(70));
+		i=s.iterator();
+		System.out.println("\n The Hash Map after the Change is :\n");
+		System.out.println("Names \t\tMarks\n");
+		while(i.hasNext())
+		{
+			Map.Entry e=(Map.Entry)i.next();
+			System.out.println(e.getKey() + "\t\t" +e.getValue());
+		}
+
+	}
+}

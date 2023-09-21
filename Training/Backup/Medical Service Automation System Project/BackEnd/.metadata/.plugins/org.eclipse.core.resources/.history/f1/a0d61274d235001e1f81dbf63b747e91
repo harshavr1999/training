@@ -1,0 +1,5 @@
+package backend.medicalservice.Appointments.controllers;
+
+public class BillingController {
+
+}

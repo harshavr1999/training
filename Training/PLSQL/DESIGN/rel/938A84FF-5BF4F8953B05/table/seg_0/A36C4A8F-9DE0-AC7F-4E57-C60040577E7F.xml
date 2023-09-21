@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A36C4A8F-9DE0-AC7F-4E57-C60040577E7F" schemaObject="63A0351D-F97E-5B38-1C22-F6952356D619" name="USERS">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>FD46EDB3-069F-E3B3-85C9-8837D3F9248B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USERNAME" id="175CD98E-9D9D-8A1F-07C1-8CB61953F1E3">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>9CDCAAF9-D038-19F2-8096-8914BF4FE5E1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="E0368941-3E52-9C2A-93E4-576EE517F647">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>4475397B-CD77-56E0-323A-1A109C604150</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROLE_ID" id="CC12F5BC-23DA-6A81-CB87-EE83C29DB350">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>87DBA8D9-4927-B874-FFFE-266AAE5A193F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8193DF1A-D317-0227-9296-9BB5F2993C25" referredColumn="90F4616C-5091-48A9-D227-08FA17727EE6"/>
+</associations>
+</Column>
+<Column name="MOBILE_NUMBER" id="D87D78C4-9412-46ED-29DB-2F679FEEC9A0">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>D7E1B6EC-45A3-F3F2-C7C4-702687739EB1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C8441EA9-7146-AD53-A17A-7673443664E1" name="USERS_PK">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>B831CB21-C451-DD6E-3094-86F2B6CE71F8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="175CD98E-9D9D-8A1F-07C1-8CB61953F1E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA0B4EC4-2A80-D6B9-9052-87AAD9D1C962" schemaObject="63A0351D-F97E-5B38-1C22-F6952356D619" name="USERS_PK">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<importedID>C4849023-1FC9-2AB5-8F02-3ACE32EF93D4</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="175CD98E-9D9D-8A1F-07C1-8CB61953F1E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49055294-FF64-44CC-C6C2-5F872A6D6AC2" name="USERS_FK1">
+<createdBy>harshavardhan.reddy</createdBy>
+<createdTime>2023-04-30 16:57:19 UTC</createdTime>
+<ownerDesignName>DESIGN</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC12F5BC-23DA-6A81-CB87-EE83C29DB350"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

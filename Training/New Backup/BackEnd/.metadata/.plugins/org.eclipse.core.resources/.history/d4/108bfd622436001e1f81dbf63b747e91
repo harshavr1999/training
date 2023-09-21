@@ -1,0 +1,16 @@
+package backend.medicalservice.Messages.controllers;
+
+import org.springframework.amqp.core.Queue;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RabbitMQConfig {
+	
+	@Bean
+	public Queue myQueue() {
+        // Define the queue name when creating the Queue bean
+        return new Queue("chatting");
+    }
+	
+}

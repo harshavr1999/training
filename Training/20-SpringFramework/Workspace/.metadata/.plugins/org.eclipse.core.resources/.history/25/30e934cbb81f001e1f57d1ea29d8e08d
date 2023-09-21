@@ -1,0 +1,23 @@
+package training.iqgateway.business;
+
+import training.iqgateway.entity.OffenceEO;
+import training.iqgateway.entity.OwnerDetailsEO;
+import training.iqgateway.entity.VehicleDetailsEO;
+
+public interface RtoOperations {
+	
+	// Vehicle
+	public Integer addVehicleDetails(VehicleDetailsEO vehicleRef);
+	public Integer modifyVehicleDetails(VehicleDetailsEO vehicleRef);
+	public Integer vehicleRegistration(RegDetailsEO regRef);
+	public void transferVehicle(Integer vehicleNumber);
+	
+	//Owner
+    public Integer addOwner(OwnerDetailsEO ownerRef);
+    public Integer modifyOwner(OwnerDetailsEO ownerRef);
+    
+    //Offences
+    public Integer addOffence(OffenceEO offecnceRef);
+    public Integer modifyOffence(OffenceEO offecnceRef);
+    public Integer deleteOffence(Integer offenceID);
+}

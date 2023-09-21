@@ -1,0 +1,8 @@
+Vehicle 
+
+1. no of cylinder(number) -> chasis number(varchar2)
+
+Owner
+
+1. adress-proof-name -> aadhaar number
+2. Gender (char 1)-> gender(string ) 

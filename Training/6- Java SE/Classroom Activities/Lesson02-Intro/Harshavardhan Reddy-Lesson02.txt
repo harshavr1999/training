@@ -1,0 +1,102 @@
+1.Define the following terms:
+	a.Class
+		Class is a blue print or template of a object.Class is like a group of objects.
+	b.Object
+		Object is a instance of class which has the states and behaviours nothing but physical entity
+	c.Encapsulation
+		Encapsulation is nothing wrapping up of attributes and methods as single unit.
+	d.Inheritance
+		Inheritance is nothing but proccess of equaring the attributes and methods from one class to another class.
+	e.Polymorphism
+		Polymorphism is an ability of a message to be displayed in more than one form.
+	
+2.Classes:
+	a.Customer - The customers are the one who orders products. This class comprises for all the deatils regarding the customer.
+	b.Order - Order class contains deatils of who ordered the product and the time of order and quantity.
+	c.Product - Product class contains deatils of item which has been ordered by the customer.
+
+3.Attributes
+	a.Customer:
+		1. String address
+		2. int id
+		3. String name
+		4. String phone
+	b.Order
+		1.Customer customer
+		2.int id
+		3.DefaultListModel items
+		4.String orderDate
+		5.double orderTotal
+	c.OrderItem
+		1.int lineNbr
+		2.Product product
+		3.int quantity
+	d.Product
+		1.String description
+		2.int id
+		3.String name
+		4.double retailPrice
+	e.Hardware
+		1.int warrantyPeriod
+	f.Manual
+		1.String publisher
+	g.Software
+		1.String license
+	h.Company
+		1.String contact
+		2.int discount
+	i.Individual
+		1.String licNumber
+
+4.Behaviors(methods or operations)
+	a.Customer:
+		1. Customer(...)
+		2. Customer()
+		3. getAddress()
+		4. getId()
+		5. getName()
+		6. getphone()
+		7. setAddress()
+		8. setId()
+	b.Order
+		1.Order()
+		2.addOrderitem()
+		3.getCustomer()
+		4.getId()
+		5.getModel()
+		6.getOrderDate()
+	c.OrderItem
+		1.OrderItem()
+		2.getItemTotal()
+		3.getLineNbr()
+		4.getProduct()
+		5.getQuantity()
+		6.getTax()
+		7.getUnitPrice()
+	d.Product
+		1.Product()
+		2.getDescription()
+	e.Hardware
+		1.Hardware()
+		2.getTax()
+		3.getWarrantyPeriod()
+	f.Manual
+		1.Manual()
+		2.getPublisher()
+	g.Software
+		1.Software()
+		2.getLicense()
+	h.Company
+		1.Company()
+		2.getContact()
+		3.getDiscount()
+		4.setContact()
+	i.Individual
+		1.Individual()
+		2.getLicNumber()
+		3.setLicNumber
+		4.toString()
+
+5.
+	a.Company and Individual classes are inheriting from the Customer class
+	b.Hardware, Manual and Software are inheriting from the Product class

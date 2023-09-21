@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Lesson05-Spring-DAO-JDBC"/>
+<aop-project name="Lesson02-WithSpring"/>
+<aop-project name="Lesson06-Spring-ORM"/>
+<aop-project name="Lesson03-SpringCore-II-ApplicationEvents"/>
+</aop-reference-model>

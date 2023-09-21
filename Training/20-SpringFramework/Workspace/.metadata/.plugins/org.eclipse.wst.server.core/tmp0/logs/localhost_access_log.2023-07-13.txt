@@ -1,0 +1,4 @@
+127.0.0.1 - - [13/Jul/2023:10:55:05 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [13/Jul/2023:10:55:07 +0530] "GET /Lesson07-WebUI-Spring/CurrencyConvertorInput.html HTTP/1.1" 200 502
+0:0:0:0:0:0:0:1 - - [13/Jul/2023:10:55:52 +0530] "POST /Lesson07-WebUI-Spring/CurrencyConvertorServlet HTTP/1.1" 200 89
+0:0:0:0:0:0:0:1 - - [13/Jul/2023:10:56:00 +0530] "POST /Lesson07-WebUI-Spring/CurrencyConvertorServlet HTTP/1.1" 200 88

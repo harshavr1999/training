@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<procedure xmlns="http://xmlns.oracle.com/jdeveloper/1111/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">4f4b091f-29c8-43df-8c39-7b88a6be7082</identifier>
+  </ID>
+  <name>TEMPLATE_PROCEDURE1</name>
+  <schema>
+    <name>TEMPLATES</name>
+  </schema>
+  <source>/*
+ * To change this template comment, edit FOD.TEMPLATES.TEMPLATE_PROCEDURE1
+ */
+CREATE OR REPLACE PROCEDURE TEMPLATE_PROCEDURE1 AS 
+BEGIN
+  NULL;
+END TEMPLATE_PROCEDURE1;</source>
+</procedure>

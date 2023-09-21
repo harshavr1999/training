@@ -1,0 +1,51 @@
+<xs:schema xmlns:tns="http://iqgatway.training/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
+     targetNamespace="http://iqgatway.training/">
+    <xs:element name="cancelReservation" type="tns:cancelReservation"/>
+    <xs:element name="cancelReservationResponse" type="tns:cancelReservationResponse"/>
+    <xs:element name="destination" type="tns:destination"/>
+    <xs:element name="destinationResponse" type="tns:destinationResponse"/>
+    <xs:element name="fromCity" type="tns:fromCity"/>
+    <xs:element name="fromCityResponse" type="tns:fromCityResponse"/>
+    <xs:element name="selectSeatNo" type="tns:selectSeatNo"/>
+    <xs:element name="selectSeatNoResponse" type="tns:selectSeatNoResponse"/>
+    <xs:complexType name="cancelReservation">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="cancelReservationResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fromCity">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fromCityResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="destination">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="destinationResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="selectSeatNo">
+        <xs:sequence>
+            <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="selectSeatNoResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

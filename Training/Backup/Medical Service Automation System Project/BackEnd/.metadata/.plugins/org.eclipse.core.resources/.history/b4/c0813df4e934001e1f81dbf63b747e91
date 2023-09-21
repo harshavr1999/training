@@ -1,0 +1,26 @@
+package backend.medicalservice.Appointments.services.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.multipart.MultipartFile;
+
+import backend.medicalservice.Appointments.entities.PrescriptionEO;
+import backend.medicalservice.Appointments.repositories.PrescriptionRepository;
+import backend.medicalservice.Appointments.services.PrescriptionService;
+
+public class PrescriptionServiceImpl implements PrescriptionService {
+
+	@Autowired PrescriptionRepository prescriptionRepRef;
+	
+	@Override
+	public String uploadDocument(MultipartFile file) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PrescriptionEO getDocumentByFileName(String fileName) {
+		// TODO Auto-generated method stub
+		return prescriptionRepRef.findByFileName(fileName);
+	}
+
+}

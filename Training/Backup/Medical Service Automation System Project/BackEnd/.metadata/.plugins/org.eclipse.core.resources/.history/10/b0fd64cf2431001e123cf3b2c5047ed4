@@ -1,0 +1,25 @@
+package backend.medicalservice.entities;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+/**
+ * 
+ * @author harshavardhan.reddy
+ * This is MessageEO entity
+ */
+public class MessageEO {
+	
+	@Id
+	private String messageId;
+	
+	@DBRef
+	private UserEO sender;
+	
+	private String content;
+	
+	private String chat;
+	
+	
+}

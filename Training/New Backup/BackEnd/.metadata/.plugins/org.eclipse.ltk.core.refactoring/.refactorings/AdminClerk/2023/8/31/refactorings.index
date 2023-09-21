@@ -1,0 +1,5 @@
+1691134271431	Rename package 'backend.medicalservice.controllers'
+1691134301393	Rename package 'backend.medicalservice.entities'
+1691134315162	Rename package 'backend.medicalservice.repositories'
+1691134333056	Rename package 'backend.medicalservice.services'
+1691134346023	Rename package 'backend.medicalservice.services.impl'

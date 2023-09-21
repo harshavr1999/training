@@ -1,0 +1,9 @@
+package backend.medicalservice.repositories;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import backend.medicalservice.AdminClerk.entities.UserEO;
+
+public interface UserRepository extends MongoRepository<UserEO, String>{
+
+}

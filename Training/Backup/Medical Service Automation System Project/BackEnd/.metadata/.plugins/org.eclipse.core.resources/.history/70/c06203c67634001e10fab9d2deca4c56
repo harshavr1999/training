@@ -1,0 +1,57 @@
+package backend.medicalservice.AdminClerk.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import backend.medicalservice.AdminClerk.entities.PatientEO;
+import backend.medicalservice.AdminClerk.repositories.PatientRepository;
+import backend.medicalservice.AdminClerk.services.PatientService;
+
+@Service
+public class PatientServiceImpl implements PatientService {
+
+	@Autowired PatientRepository patientRepRef;
+	
+	@Override
+	public List<PatientEO> getAllPatients() {
+
+		List<PatientEO> patientsList = new ArrayList<>();
+		patientRepRef.findAll().forEach(patientsList::add);
+		
+		return patientsList;
+	}
+
+	@Override
+	public void addpatient(PatientEO patient) {
+		// TODO Auto-generated method stub
+		patientRepRef.save(patient);
+	}
+
+	@Override
+	public void updatePatientByAadharNumber(String aadharNumber, PatientEO patient) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deletePatient(String aadharNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PatientEO getPatientByAadharNumber(String aadharNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> allAadharNumber() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

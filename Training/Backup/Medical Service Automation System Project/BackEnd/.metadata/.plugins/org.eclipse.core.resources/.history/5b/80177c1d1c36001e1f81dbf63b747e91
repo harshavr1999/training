@@ -1,0 +1,18 @@
+package backend.medicalservice.Messages.services.impl;
+
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import backend.medicalservice.Messages.services.MessageProducerService;
+
+public class MessageServiceImpl implements MessageProducerService {
+
+	@Autowired RabbitTemplate rabbitTemplate;
+	
+	
+	@Override
+	public void sendMessage(String message) {
+		rabbitTemplate.convertAndSend("exchange", "routingKey", message);
+	}
+
+}

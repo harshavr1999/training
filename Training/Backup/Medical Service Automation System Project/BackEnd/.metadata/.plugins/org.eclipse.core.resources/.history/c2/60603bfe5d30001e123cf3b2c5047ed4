@@ -1,0 +1,22 @@
+package backend.medicalservice.entities;
+
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
+
+@Document(collection="chats")
+public class ChatEO {
+
+	@Id
+	private String chatId;
+	private String chatName;
+	
+	@DocumentReference
+	private List<UserEO> users;
+	
+	@DocumentReference
+	private List<MessageEO> messages;
+	
+}

@@ -1,0 +1,50 @@
+package backend.medicalservice.Messages.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import backend.medicalservice.Messages.entities.MessageEO;
+import backend.medicalservice.Messages.services.MessageConsumerService;
+import backend.medicalservice.Messages.services.MessageProducerService;
+import backend.medicalservice.Messages.services.MessageService;
+
+@RestController
+public class MessageController {
+	
+	@Autowired MessageProducerService messageSenderRef;
+	@Autowired MessageConsumerService messageConsumerRef;
+	@Autowired MessageService messageServiceRef;
+	
+	@PostMapping("/send-message")
+	public String sendMessage(@RequestBody String message){
+		messageSenderRef.sendMessageWithTTL(message, 3000);
+		System.out.println("Sent");
+		return "Message Sent";
+	}
+	
+	@GetMapping("/get-messages")
+    public ResponseEntity<List<String>> getMessages() {
+        List<String> messages = messageConsumerRef.getStoredMessages(); // Implement this method
+        return ResponseEntity.ok(messages);
+    }
+	
+	@PostMapping("/sendNewMessage")
+	public void receiveAndStoreMessage(@RequestParam String senderEmail, @RequestParam String receiverEmail, @RequestParam String messageContent){
+		messageServiceRef.receiveAndStoreMessage(senderEmail, receiverEmail, messageContent);
+	}
+	
+	@GetMapping("/getMessages")
+	public List<MessageEO> getMessagesBySenderAndReceiver(
+            @RequestParam String senderEmail,
+            @RequestParam String receiverEmail
+    ) {
+        return messageServiceRef.getMessagesBySenderAndReceiverEmails(senderEmail, receiverEmail);
+    }
+}

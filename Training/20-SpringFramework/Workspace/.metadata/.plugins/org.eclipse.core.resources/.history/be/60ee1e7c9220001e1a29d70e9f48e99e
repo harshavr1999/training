@@ -1,0 +1,8 @@
+package training.iqgateway.entities;
+
+public class DepartmentEO {
+	private Integer departmentId;
+	private String departmentName;
+	private Integer managerId;
+	private Integer locationid;
+}

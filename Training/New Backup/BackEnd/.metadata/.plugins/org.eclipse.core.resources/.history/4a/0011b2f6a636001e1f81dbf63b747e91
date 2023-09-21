@@ -1,0 +1,12 @@
+package backend.medicalservice.Messages.services;
+
+import java.util.List;
+
+public interface MessageConsumerService {
+
+	public void handleMessage(String message);
+
+	public List<String> getStoredMessages();
+
+	public void receiveAndStoreMessage(String senderEmail, String receiverEmail, String messageContent);
+}
